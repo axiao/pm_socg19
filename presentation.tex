@@ -130,7 +130,7 @@
 % unit-capacity construction, note number of edges
 \end{frame}
 
-% 03*: select prior work 
+% 03*: select prior work
 \begin{frame}{Problems for existing geometric perfect matching algorithms}
 % many other geometric matching algs need triangle ineq and fail for q > 1, e.g. certain embedding into sparse graph
 % for some others, unclear how to generalize to partial (e.g. divide and conquer AV04)
@@ -139,11 +139,11 @@
 
 % 04: new results for partial, geom. based on prior work. present 1,2 only
 \begin{frame}{Existing partial matching algorithms (non-geometric)}
-% non-geom: Hungarian, RT/GHKT cost scaling, 
+% non-geom: Hungarian, RT/GHKT cost scaling,
 
 % geometrized:
 % Hungarian+BCP (Vaidya, KMRSS)
-% cost-scaling+BCP 
+% cost-scaling+BCP
 
 % our results
 \end{frame}
@@ -151,30 +151,30 @@
 % our results 1
 \begin{frame}{Our results}
 % Hungarian+BCP
-% cost-scaling+BCP 
+% cost-scaling+BCP
 \end{frame}
 
 % HUNG
 
 % 05: Hungarian algorithm and least-cost augmentation
 % TODO talk about potentials?
-\begin{frame}{}
+\begin{frame}{Hungarian algorithm}
 \end{frame}
 
 % 06: Hungarian search with BCP
-\begin{frame}{}
+\begin{frame}{Hungarian search, with BCP}
 \end{frame}
 
 % 08*: problem: initializing the BCP data structure (why not persistence?)
-\begin{frame}{}
+\begin{frame}{Problem: BCP initialization}
 \end{frame}
 
 % 09*: rewinding --> k^2polylogn time per augmentation, one-time npolylogn pre
-\begin{frame}{}
+\begin{frame}{Rewinding}
 \end{frame}
 
 % 10: potential changes + Vaidya?
-\begin{frame}{}
+\begin{frame}{Potential updates}
 \end{frame}
 
 % COST-SCALE
@@ -182,47 +182,54 @@
 % our results 2
 \begin{frame}{Our results}
 % Hungarian+BCP
-% cost-scaling+BCP 
+% cost-scaling+BCP
 \end{frame}
 
 % 11: cost-scaling unit-cap MCF --- choose a different set of augmenting paths
 % 12: changing scales (2\eps to \eps, losing circulation)
-\begin{frame}{}
+\begin{frame}{Partial matching by cost-scaling}
 \end{frame}
 
 % 13: refinement by blocking flows (more of the same, \sqrt{k} per scale, O(k) size per blocking)
-\begin{frame}{}
+\begin{frame}{Refinement by blocking flows}
 \end{frame}
 
 % 14*: new problem: number of relaxations could be \Omega(n) (example); compare vs Hung
-\begin{frame}{}
+\begin{frame}{Hungarian search dead ends}
+\begin{enumerate}
+\item There can be $\Omega(n)$ relaxations even if $k$ is very small.
+%TODO
+\end{enumerate}
 \end{frame}
 
 % 15: dead/alive nodes, alive paths. "really want to query minimizing alive path instead", "don't track their potential"
-\begin{frame}{}
+\begin{frame}{Dead or alive}
 \end{frame}
 
 % 16: alive paths in the BCP
-\begin{frame}{}
+\begin{frame}{Hungarian search over alive paths}
 \end{frame}
 
 % 17: # relaxations = O(|supp(f)|) = O(k)
-\begin{frame}{}
+\begin{frame}{How many relaxations now?}
 \end{frame}
 
 % 18*: dead node potentials
-\begin{frame}{}
+\begin{frame}{Dead node potentials}
 \end{frame}
 
 % 19: punchline running time: per-scale npolylogn pre, k\sqrt{k}polylogn per, O(log(n^q/\eps)) scales
-\begin{frame}{}
+\begin{frame}{Cost-scaling time summary}
 \end{frame}
 
 %TODO
 
-
-
-
+% end slide
+\begin{frame}{The End}
+\begin{center}
+	Thank you.
+\end{center}
+\end{frame}
 
 
 
@@ -248,21 +255,10 @@
 %\end{frame}
 
 
-
-
-
-% end slide
-\begin{frame}{The End}
-\begin{center}
-	Thank you.
-\end{center}
-\end{frame}
-
 %\begin{frame}[allowframebreaks]{Citations}
 %\tiny
 %\bibliography{ref}
 %\bibliographystyle{alpha}
 %\end{frame}
-
 
 \end{document}
