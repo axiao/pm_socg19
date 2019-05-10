@@ -114,32 +114,109 @@
 \maketitle
 \end{frame}
 
-
-% outline
+% INTRO
 
 % 01: gentle example, emphasize cost fn
+\begin{frame}{Geometric (bipartite) matching}
+% two point sets in 2d, show cost fn (distance exponentitated to constant)
+\end{frame}
+
+\begin{frame}{Geometric (bipartite) partial matching}
+% only k pairs
+\end{frame}
+
 % 02: unit-cap MCF form
-% 03*: select prior work (non-geom, non-partial), emphasize SA
+\begin{frame}{Geometric partial matching as min-cost flow}
+% unit-capacity construction, note number of edges
+\end{frame}
+
+% 03*: select prior work 
+\begin{frame}{Problems for existing geometric perfect matching algorithms}
+% many other geometric matching algs need triangle ineq and fail for q > 1, e.g. certain embedding into sparse graph
+% for some others, unclear how to generalize to partial (e.g. divide and conquer AV04)
+% notable: SA12 (only first power)
+\end{frame}
+
 % 04: new results for partial, geom. based on prior work. present 1,2 only
+\begin{frame}{Existing partial matching algorithms (non-geometric)}
+% non-geom: Hungarian, RT/GHKT cost scaling, 
+
+% geometrized:
+% Hungarian+BCP (Vaidya, KMRSS)
+% cost-scaling+BCP 
+
+% our results
+\end{frame}
+
+% our results 1
+\begin{frame}{Our results}
+% Hungarian+BCP
+% cost-scaling+BCP 
+\end{frame}
+
+% HUNG
+
 % 05: Hungarian algorithm and least-cost augmentation
+% TODO talk about potentials?
+\begin{frame}{}
+\end{frame}
+
 % 06: Hungarian search with BCP
-% 07: HS: number of relaxations --> O(knpolylogn) time
+\begin{frame}{}
+\end{frame}
+
 % 08*: problem: initializing the BCP data structure (why not persistence?)
+\begin{frame}{}
+\end{frame}
+
 % 09*: rewinding --> k^2polylogn time per augmentation, one-time npolylogn pre
+\begin{frame}{}
+\end{frame}
+
 % 10: potential changes + Vaidya?
+\begin{frame}{}
+\end{frame}
+
+% COST-SCALE
+
+% our results 2
+\begin{frame}{Our results}
+% Hungarian+BCP
+% cost-scaling+BCP 
+\end{frame}
+
 % 11: cost-scaling unit-cap MCF --- choose a different set of augmenting paths
 % 12: changing scales (2\eps to \eps, losing circulation)
+\begin{frame}{}
+\end{frame}
+
 % 13: refinement by blocking flows (more of the same, \sqrt{k} per scale, O(k) size per blocking)
+\begin{frame}{}
+\end{frame}
+
 % 14*: new problem: number of relaxations could be \Omega(n) (example); compare vs Hung
+\begin{frame}{}
+\end{frame}
+
 % 15: dead/alive nodes, alive paths. "really want to query minimizing alive path instead", "don't track their potential"
+\begin{frame}{}
+\end{frame}
+
 % 16: alive paths in the BCP
+\begin{frame}{}
+\end{frame}
+
 % 17: # relaxations = O(|supp(f)|) = O(k)
+\begin{frame}{}
+\end{frame}
+
 % 18*: dead node potentials
+\begin{frame}{}
+\end{frame}
+
 % 19: punchline running time: per-scale npolylogn pre, k\sqrt{k}polylogn per, O(log(n^q/\eps)) scales
-% 20: 
-
-
-
+\begin{frame}{}
+\end{frame}
 
 %TODO
 
@@ -152,27 +229,23 @@
 %SECTION: pmt
 
 % gentle example + equation
-\begin{frame}{Example}
-% point sets A and B of size m, n respectively
-% allowed to translate A --> A+t
-% minimum-cost k-matching between A+t and B
-% what's the best translation?
-\begin{figure}
-\begin{center}
-\includegraphics<1>[width=\textwidth,page=1]{pmt_example}%
-\includegraphics<2>[width=\textwidth,page=2]{pmt_example}%
-\includegraphics<3>[width=\textwidth,page=3]{pmt_example}%
-\includegraphics<4>[width=\textwidth,page=4]{pmt_example}%
-\includegraphics<5>[width=\textwidth,page=5]{pmt_example}%
-\includegraphics<6>[width=\textwidth,page=6]{pmt_example}%
-\includegraphics<7->[width=\textwidth,page=7]{pmt_example}%
-\end{center}
-\end{figure}
-\begin{itemize}
-\item<7-> Find the minimum-cost matching over all translations.
-% in words, mention polytime algorithms when t fixed ``well studied problem''
-\end{itemize}
-\end{frame}
+
+%\begin{frame}{Example}
+%\begin{figure}
+%\begin{center}
+%\includegraphics<1>[width=\textwidth,page=1]{pmt_example}%
+%\includegraphics<2>[width=\textwidth,page=2]{pmt_example}%
+%\includegraphics<3>[width=\textwidth,page=3]{pmt_example}%
+%\includegraphics<4>[width=\textwidth,page=4]{pmt_example}%
+%\includegraphics<5>[width=\textwidth,page=5]{pmt_example}%
+%\includegraphics<6>[width=\textwidth,page=6]{pmt_example}%
+%\includegraphics<7->[width=\textwidth,page=7]{pmt_example}%
+%\end{center}
+%\end{figure}
+%\begin{itemize}
+%\item<7-> Find the minimum-cost matching over all translations.
+%\end{itemize}
+%\end{frame}
 
 
 
