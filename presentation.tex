@@ -17,16 +17,14 @@
 %\hypersetup{colorlinks=true, urlcolor=Blue, citecolor=Green, linkcolor=BrickRed, breaklinks, unicode}
 
 \usepackage[nocompress]{cite}
-\usepackage{amsmath,mathtools,stmaryrd}
-\usepackage{enumerate}
-\usepackage{latexsym,amsmath}
-\usepackage{amssymb,stmaryrd}
+\usepackage{amsmath,mathtools}
 \usepackage{euscript}
+\usepackage{latexsym}
+\usepackage{amssymb,stmaryrd}
+\usepackage{enumerate}
 \usepackage{algorithm,algorithmicx}
 \usepackage[noend]{algpseudocode}
 \renewcommand{\algorithmicrequire}{\textbf{Requirement:}}
-
-\usepackage{mathtools} % for \coloneqq
 
 \usepackage{graphicx}
 \usepackage{epstopdf}
@@ -119,39 +117,111 @@
 % 01: gentle example, emphasize cost fn
 \begin{frame}{Geometric (bipartite) matching}
 % two point sets in 2d, show cost fn (distance exponentitated to constant)
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=1]{example}%
+\includegraphics<2>[width=0.8\textwidth,page=2]{example}%
+\includegraphics<3->[width=0.8\textwidth,page=3]{example}%
+\end{center}
+\end{figure}
+
 \end{frame}
 
 \begin{frame}{Geometric (bipartite) partial matching}
 % only k pairs
+\begin{figure}
+\begin{center}
+\includegraphics<1->[width=0.8\textwidth,page=4]{example}%
+\end{center}
+\end{figure}
 \end{frame}
 
 % 02: unit-cap MCF form
-\begin{frame}{Geometric partial matching as min-cost flow}
+\begin{frame}{Geometric partial matching as unit-capacity min-cost flow}
 % unit-capacity construction, note number of edges
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=\textwidth,page=1]{pm-to-mcf}%
+\includegraphics<2>[width=\textwidth,page=2]{pm-to-mcf}%
+\includegraphics<3>[width=\textwidth,page=3]{pm-to-mcf}%
+\includegraphics<4>[width=\textwidth,page=4]{pm-to-mcf}%
+\includegraphics<5>[width=\textwidth,page=5]{pm-to-mcf}%
+\includegraphics<6>[width=\textwidth,page=6]{pm-to-mcf}%
+\includegraphics<7>[width=\textwidth,page=7]{pm-to-mcf}%
+\includegraphics<8->[width=\textwidth,page=8]{pm-to-mcf}%
+\end{center}
+\end{figure}
 \end{frame}
 
 % 03*: select prior work
-\begin{frame}{Problems for existing geometric perfect matching algorithms}
+\begin{frame}{Issues for geometric perfect matching algorithms}
 % many other geometric matching algs need triangle ineq and fail for q > 1, e.g. certain embedding into sparse graph
 % for some others, unclear how to generalize to partial (e.g. divide and conquer AV04)
 % notable: SA12 (only first power)
+\begin{equation*}
+|A| = r, \quad |B| = n, \quad A, B \subset \reals^2, \quad q \geq 1
+\end{equation*}
+\begin{equation*}
+\min_{k \text{-matching } M}\sum_{(a, b) \in M} \|a - b\|^q
+\end{equation*}
+\vspace{-10pt}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth,page=1]{perf_geom_issues}%
+\end{center}
+\end{figure}
+\vspace{-5pt}
+{\small For $q = 1$, [Sharathkumar-Agarwal]: $(1+\eps)$-approx. in $O(n\poly(1/\eps, \log n))$ time.}
 \end{frame}
 
 % 04: new results for partial, geom. based on prior work. present 1,2 only
-\begin{frame}{Existing partial matching algorithms (non-geometric)}
+\begin{frame}{Partial matching algorithms (non-geometric)}
 % non-geom: Hungarian, RT/GHKT cost scaling,
-
 % geometrized:
 % Hungarian+BCP (Vaidya, KMRSS)
 % cost-scaling+BCP
-
-% our results
+\begin{equation*}
+|A| = r, \quad |B| = n, \quad A, B \subset \reals^2, \quad q \geq 1 
+\end{equation*}
+\begin{equation*}
+\min_{k \text{-matching } M}\sum_{(a, b) \in M} \|a - b\|^q
+\end{equation*}
+\begin{itemize}
+\item Hungarian algorithm [Kuhn]: $O(kn^2 + k^2\log r)$
+\item Cost-scaling [Ramshaw-Tarjan, Goldberg~\etal]: $O(n^2\sqrt{k}\log(kC))$ (integer costs),
+	or $O(n^2\sqrt{k})$ time per cost scale. \pause
+	\begin{itemize}
+	\item After reduction, $\log(n^q/\eps)$ cost scales for a $(1+\eps)$-approx. \pause
+	\end{itemize}
+\end{itemize}
+\vspace{10pt}
+Using dynamic bichromatic closest pair (BCP) data structures:
+\begin{itemize}
+\item Hungarian algorithm: $O(kn\polylog(n))$
+\item Cost-scaling: $O(n\sqrt{k}\polylog(n))$ time per cost scale.
+\end{itemize}
 \end{frame}
 
 % our results 1
 \begin{frame}{Our results}
 % Hungarian+BCP
 % cost-scaling+BCP
+Previous:
+\begin{itemize}
+\item Hungarian algorithm w/ BCP: $O(kn\polylog(n))$
+\item Cost-scaling w/ BCP: $O(n\sqrt{k}\polylog(n))$ time per cost scale.
+\end{itemize}
+\pause
+\vspace{10pt}
+
+New:
+\begin{enumerate}
+\item Hungarian algorithm: $O((n+k^2)\polylog(n))$ time, exact.
+\item Cost-scaling: $O((n+k\sqrt{k})\polylog(n))$ time per cost scale, $(1+\eps)$-approx.
+\pause
+\vspace{10pt}
+\item Geometric Transportation: $O(\min(n^2, nr^{3/2})\polylog(n))$ time, exact.
+\end{enumerate}
 \end{frame}
 
 % HUNG
