@@ -136,23 +136,6 @@
 \end{figure}
 \end{frame}
 
-% 02: unit-cap MCF form
-\begin{frame}{Geometric partial matching as unit-capacity min-cost flow}
-% unit-capacity construction, note number of edges
-\begin{figure}
-\begin{center}
-\includegraphics<1>[width=\textwidth,page=1]{pm-to-mcf}%
-\includegraphics<2>[width=\textwidth,page=2]{pm-to-mcf}%
-\includegraphics<3>[width=\textwidth,page=3]{pm-to-mcf}%
-\includegraphics<4>[width=\textwidth,page=4]{pm-to-mcf}%
-\includegraphics<5>[width=\textwidth,page=5]{pm-to-mcf}%
-\includegraphics<6>[width=\textwidth,page=6]{pm-to-mcf}%
-\includegraphics<7>[width=\textwidth,page=7]{pm-to-mcf}%
-\includegraphics<8->[width=\textwidth,page=8]{pm-to-mcf}%
-\end{center}
-\end{figure}
-\end{frame}
-
 % 03*: select prior work
 \begin{frame}{Issues for geometric perfect matching algorithms}
 % many other geometric matching algs need triangle ineq and fail for q > 1, e.g. certain embedding into sparse graph
@@ -174,6 +157,7 @@
 {\small For $q = 1$, [Sharathkumar-Agarwal]: $(1+\eps)$-approx. in $O(n\poly(1/\eps, \log n))$ time.}
 \end{frame}
 
+%TODO move this into a table
 % 04: new results for partial, geom. based on prior work. present 1,2 only
 \begin{frame}{Partial matching algorithms (non-geometric)}
 % non-geom: Hungarian, RT/GHKT cost scaling,
@@ -187,9 +171,9 @@
 \min_{k \text{-matching } M}\sum_{(a, b) \in M} \|a - b\|^q
 \end{equation*}
 \begin{itemize}
-\item Hungarian algorithm [Kuhn]: $O(kn^2 + k^2\log r)$
-\item Cost-scaling [Ramshaw-Tarjan, Goldberg~\etal]: $O(n^2\sqrt{k}\log(kC))$ (integer costs),
-	or $O(n^2\sqrt{k})$ time per cost scale. \pause
+\item Hungarian algorithm [Kuhn]: $O(krn + k^2\log r)$
+\item Cost-scaling [Ramshaw-Tarjan, Goldberg~\etal]: $O(rn\sqrt{k}\log(kC))$ (integer costs),
+	or $O(rn\sqrt{k})$ time per cost scale. \pause
 	\begin{itemize}
 	\item After reduction, $\log(n^q/\eps)$ cost scales for a $(1+\eps)$-approx. \pause
 	\end{itemize}
@@ -227,24 +211,131 @@ New:
 % HUNG
 
 % 05: Hungarian algorithm and least-cost augmentation
-% TODO talk about potentials?
 \begin{frame}{Hungarian algorithm}
+\vspace{-10pt}
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=1]{hung_example}%
+\includegraphics<2>[width=0.8\textwidth,page=2]{hung_example}%
+\includegraphics<3>[width=0.8\textwidth,page=3]{hung_example}%
+\includegraphics<4>[width=0.8\textwidth,page=4]{hung_example}%
+\includegraphics<5>[width=0.8\textwidth,page=5]{hung_example}%
+\includegraphics<6>[width=0.8\textwidth,page=6]{hung_example}%
+\includegraphics<7>[width=0.8\textwidth,page=7]{hung_example}%
+\includegraphics<8->[width=0.8\textwidth,page=8]{hung_example}%
+\end{center}
+\end{figure}
+\vspace{-15pt}
+\onslide<9->{Hungarian algorithm:}
+\begin{enumerate}
+\item<9-> \alert{Hungarian search}: Dijkstra-like search changing $\pi$ until $\exists$ an admissible augmenting path.
+\item<9-> Augment by the admissible augmenting path you found.
+\end{enumerate}
 \end{frame}
 
 % 06: Hungarian search with BCP
+\begin{frame}{Hungarian search}
+\begin{itemize}
+\item \alert{Reduced cost}: $c_\pi(v, w) = c(v, w) - \pi(v) + \pi(w)$
+\item Keep $\pi$ feasible --- $c_\pi(v, w) \geq 0$ for all residual arcs $(v, w)$.
+\item \alert{Admissible}: $c_\pi(v, w) \leq 0$ for residual arc $(v, w)$.
+\end{itemize}
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=9]{hung_example}%
+\includegraphics<2>[width=0.8\textwidth,page=10]{hung_example}%
+\includegraphics<3>[width=0.8\textwidth,page=11]{hung_example}%
+\includegraphics<4>[width=0.8\textwidth,page=12]{hung_example}%
+\includegraphics<5>[width=0.8\textwidth,page=13]{hung_example}%
+\includegraphics<6>[width=0.8\textwidth,page=14]{hung_example}%
+\includegraphics<7>[width=0.8\textwidth,page=15]{hung_example}%
+\includegraphics<8>[width=0.8\textwidth,page=16]{hung_example}%
+\includegraphics<9>[width=0.8\textwidth,page=17]{hung_example}%
+\includegraphics<10->[width=0.8\textwidth,page=18]{hung_example}%
+\end{center}
+\end{figure}
+\end{frame}
+
 \begin{frame}{Hungarian search, with BCP}
+\begin{itemize}
+\item<1-> ``What is the minimum reduced cost residual arc leaving $X$?''
+\item<1-> For $B \to A$ residual arcs, min-heap over matching edges (at most $k$).
+\item<1-> For $A \to B$ residual arcs\ldots \onslide<2->{\alert{bichromatic closest pair} between $A \cap X$ and $B \setminus X$.}
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=1]{bcp}%
+\includegraphics<3->[width=0.8\textwidth,page=2]{bcp}%
+\end{center}
+\end{figure}
+\item<4-> {[Kaplan~\etal~17]}: For points in $\reals^2$, insert/delete in $O(\polylog n)$ time, query BCP in $O(\log^2 n)$ time.
+\end{itemize}
+
 \end{frame}
 
 % 08*: problem: initializing the BCP data structure (why not persistence?)
 \begin{frame}{Problem: BCP initialization}
+\begin{itemize}
+\item $k$ augmentations
+\item Goal: $O(k\polylog n)$ time per augmentation
+\pause
+\item $O(k)$ relaxations per Hungarian search (at most $k$ matching edges)
+\pause
+\item But, the initial BCP data structure of each Hungarian search has size $O(n)$.
+\pause
+\item \ldots $O(kn\polylog n)$ time so far.
+\end{itemize}
 \end{frame}
 
 % 09*: rewinding --> k^2polylogn time per augmentation, one-time npolylogn pre
 \begin{frame}{Rewinding}
+\begin{itemize}
+\item Initial $X$ is the set of unmatched $A$ vertices.
+\pause
+\item Initial $X$ loses exactly one vertex after an augmentation.
+\end{itemize}
+\pause
+\vspace{10pt}
+\begin{enumerate}
+\item Record the BCP operations we did during the Hungarian search, then
+	\alert{rewind} them to recover the initial BCP state.
+\pause
+\item Delete one more point from the BCP to get the next initial state.
+\end{enumerate}
+\pause
+\vspace{10pt}
+\begin{itemize}
+\item $O(k\polylog n)$ time to rewind.
+\pause
+\item Build the whole BCP once ($O(n\polylog n)$), reuse every augmentation.
+\pause
+\item Persistence?\\
+\pause
+Unfortunately, the BCP insert/delete bounds are amortized.
+\end{itemize}
 \end{frame}
 
 % 10: potential changes + Vaidya?
-\begin{frame}{Potential updates}
+\begin{frame}{Efficient potential updates}
+\begin{itemize}
+\item During the Hungarian search, how do we have time to raise $\pi$ for every $v \in X$?
+\pause
+\item {[Vaidya 89]}: batch changes into a single variable $\delta$.\\
+	``Raise $\pi$ for every $v \in X$ by $\alpha$'' replaced by $\delta \gets \delta + \alpha$.
+\vspace{10pt}
+\pause
+\item When a point enters $X$ we save it with $\gamma(v) \gets \pi(v) - \delta$.
+\pause
+\item At any point, $\pi(v) = \gamma(v) + \delta$ for $v \in X$.
+\vspace{10pt}
+\pause
+\item To use with rewinding, don't reset $\delta$ between augmentations.
+\vspace{10pt}
+\pause
+\item Summary: Build the BCP once ($O(n\polylog n)$).
+	Each Hungarian search and augmentation takes $O(k\polylog n)$ time.
+	$O((n+k^2)\polylog n)$ time total.
+\end{itemize}
+
 \end{frame}
 
 % COST-SCALE
@@ -253,10 +344,41 @@ New:
 \begin{frame}{Our results}
 % Hungarian+BCP
 % cost-scaling+BCP
+New:
+\begin{enumerate}
+\item<0> Hungarian algorithm: $O((n+k^2)\polylog(n))$ time, exact.
+\item<1-> Cost-scaling: $O((n+k\sqrt{k})\polylog(n))$ time per cost scale, $(1+\eps)$-approx.
+\vspace{10pt}
+\item<0> Geometric Transportation: $O(\min(n^2, nr^{3/2})\polylog(n))$ time, exact.
+\end{enumerate}
+\end{frame}
+
+% 02: unit-cap MCF form
+\begin{frame}{Geometric partial matching as unit-capacity min-cost flow}
+% unit-capacity construction, note number of edges
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=\textwidth,page=1]{pm-to-mcf}%
+\includegraphics<2>[width=\textwidth,page=2]{pm-to-mcf}%
+\includegraphics<3>[width=\textwidth,page=3]{pm-to-mcf}%
+\includegraphics<4>[width=\textwidth,page=4]{pm-to-mcf}%
+\includegraphics<5>[width=\textwidth,page=5]{pm-to-mcf}%
+\includegraphics<6>[width=\textwidth,page=6]{pm-to-mcf}%
+\includegraphics<7>[width=\textwidth,page=7]{pm-to-mcf}%
+\includegraphics<8->[width=\textwidth,page=8]{pm-to-mcf}%
+\end{center}
+\end{figure}
 \end{frame}
 
 % 11: cost-scaling unit-cap MCF
 \begin{frame}{Partial matching by cost-scaling}
+\begin{itemize}
+\item Reduced cost: $c_\pi(v, w) = c(v, w) - \pi(v) + \pi(w)$
+\item<0> Keep $\pi$ feasible --- $c_\pi(v, w) \geq 0$ for all residual arcs $(v, w)$.
+\item \alert{$\theta$-optimal}: $c_\pi(v, w) \geq -\theta$ for all residual arcs $(v, w)$.
+\item Admissible: $c_\pi(v, w) \leq 0$ for residual arc $(v, w)$.
+\end{itemize}
+%TODO
 \end{frame}
 
 % 12: changing scales (2\eps to \eps, losing circulation)
