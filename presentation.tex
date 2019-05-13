@@ -173,11 +173,9 @@
 \begin{itemize}
 \item Hungarian algorithm [Kuhn]: $O(krn + k^2\log r)$
 \item Cost-scaling [Ramshaw-Tarjan, Goldberg~\etal]: $O(rn\sqrt{k}\log(kC))$ (integer costs),
-	or $O(rn\sqrt{k})$ time per cost scale. \pause
-	\begin{itemize}
-	\item After reduction, $\log(n^q/\eps)$ cost scales for a $(1+\eps)$-approx. \pause
-	\end{itemize}
+	or $O(rn\sqrt{k})$ time per cost scale.
 \end{itemize}
+\pause
 \vspace{10pt}
 Using dynamic bichromatic closest pair (BCP) data structures:
 \begin{itemize}
@@ -201,7 +199,8 @@ Previous:
 New:
 \begin{enumerate}
 \item Hungarian algorithm: $O((n+k^2)\polylog(n))$ time, exact.
-\item Cost-scaling: $O((n+k\sqrt{k})\polylog(n))$ time per cost scale, $(1+\eps)$-approx.
+\item Cost-scaling: $O((n+k\sqrt{k})\polylog(n))$ time per cost scale,
+	$O(\log(n^q/\eps))$ scales, $(1+\eps)$-approx.
 \pause
 \vspace{10pt}
 \item Geometric Transportation: $O(\min(n^2, nr^{3/2})\polylog(n))$ time, exact.
@@ -347,7 +346,8 @@ Unfortunately, the BCP insert/delete bounds are amortized.
 New:
 \begin{enumerate}
 \item<0> Hungarian algorithm: $O((n+k^2)\polylog(n))$ time, exact.
-\item<1-> Cost-scaling: $O((n+k\sqrt{k})\polylog(n))$ time per cost scale, $(1+\eps)$-approx.
+\item<1-> Cost-scaling: $O((n+k\sqrt{k})\polylog(n))$ time per cost scale,
+	$O(\log(n^q/\eps))$ scales, $(1+\eps)$-approx.
 \vspace{10pt}
 \item<0> Geometric Transportation: $O(\min(n^2, nr^{3/2})\polylog(n))$ time, exact.
 \end{enumerate}
@@ -378,46 +378,185 @@ New:
 \item \alert{$\theta$-optimal}: $c_\pi(v, w) \geq -\theta$ for all residual arcs $(v, w)$.
 \item Admissible: $c_\pi(v, w) \leq 0$ for residual arc $(v, w)$.
 \end{itemize}
-%TODO
+\pause
+\begin{lemma}
+A $\theta$-optimal circulation for the partial matching network has cost at most $c(f^*) + 6k\theta$.
+\end{lemma}
+\pause
+\begin{itemize}
+\item Find $\theta$-optimal circulations for shrinking values of \alert{scale} $\theta$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Partial matching by cost-scaling}
+Given a $2\theta$-optimal circulation from the previous scale,
+\pause
+\begin{enumerate}
+\item Find a $\theta$-optimal pseudoflow $f$ with $O(k)$ excess.
+\pause
+\item \alert{Refine} $f$ into a $\theta$-optimal circulation.
+\end{enumerate}
+\pause
+\begin{lemma}
+Can reduce $(1+\eps)$-approx. geometric partial matching to executing
+$O(\log(n^q/\eps))$ scales of the cost-scaling algorithm.
+\end{lemma}
+\pause
+\begin{itemize}
+\item Focus on solving each scale efficiently.
+\end{itemize}
 \end{frame}
 
 % 12: changing scales (2\eps to \eps, losing circulation)
 \begin{frame}{Initial $\theta$-optimal pseudoflow of a scale}
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=1]{scale_init}%
+\includegraphics<2>[width=0.8\textwidth,page=2]{scale_init}%
+\includegraphics<3->[width=0.8\textwidth,page=3]{scale_init}%
+\end{center}
+\end{figure}
+\begin{itemize}
+\item<1-> Input circulation: $c_\pi(v, w) \geq -2\theta$ for all residual arcs.
+\item<2-> Forward arcs have reduced cost raised by $+\theta$ --- must be $\theta$-optimal.
+\item<3-> Only $O(k)$ reverse arcs, so check each one manually.
+\end{itemize}
 \end{frame}
 
 % 13: refinement by blocking flows (more of the same, \sqrt{k} per scale, O(k) size per blocking)
 \begin{frame}{Refinement by blocking flows}
+\begin{enumerate}
+\item \alert{Hungarian search}:
+	\onslide<0>{Dijkstra-like search changing $\pi$ until $\exists$ an admissible augmenting path.}\\
+	Dijkstra-like search changing $\pi$ \alert{in units of $\theta$} until $\exists$ an admissible augmenting path.
+\item \onslide<0>{Augment by the admissible augmenting path you found.}\\
+	Augment by an admissible \alert{blocking flow} $g$.\\
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=1]{blocking_flow}%
+\includegraphics<2>[width=0.8\textwidth,page=2]{blocking_flow}%
+\includegraphics<3>[width=0.8\textwidth,page=3]{blocking_flow}%
+\includegraphics<4->[width=0.8\textwidth,page=4]{blocking_flow}%
+\end{center}
+\end{figure}
+	\begin{itemize}
+	\item<5-> Find by DFS through the admissible residual arcs.
+	\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Refinement by blocking flows}
+\begin{enumerate}
+\item \alert{Hungarian search}: Dijkstra-like search changing $\pi$
+	\alert{in units of $\theta$} until $\exists$ an admissible augmenting path.
+
+\item Augment by an admissible \alert{blocking flow} $g$.
+\vspace{10pt}
+\begin{lemma}
+After $O(\sqrt{k})$ blocking flows, $f$ is a circulation.
+\end{lemma}
+\end{enumerate}
 \end{frame}
 
 % 14*: new problem: number of relaxations could be \Omega(n) (example); compare vs Hung
 \begin{frame}{Hungarian search dead ends}
-\begin{enumerate}
+\begin{itemize}
 \item There can be $\Omega(n)$ relaxations even if $k$ is very small.
-%TODO
-\end{enumerate}
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.9\textwidth,page=1]{why_dead}%
+\includegraphics<2>[width=0.9\textwidth,page=2]{why_dead}%
+\includegraphics<3>[width=0.9\textwidth,page=3]{why_dead}%
+\includegraphics<4->[width=0.9\textwidth,page=4]{why_dead}%
+\end{center}
+\end{figure}
+\end{itemize}
 \end{frame}
 
 % 15: dead/alive nodes, alive paths. "really want to query minimizing alive path instead", "don't track their potential"
 \begin{frame}{Dead or alive}
+\begin{itemize}
+\item \alert{Alive nodes}: nonzero excess/deficit, or adjoining flow support arcs.
+\item \alert{Dead nodes}: ones which aren't alive.
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=5]{why_dead}%
+\includegraphics<2>[width=0.8\textwidth,page=6]{why_dead}%
+\includegraphics<3,4>[width=0.8\textwidth,page=7]{why_dead}%
+\includegraphics<5>[width=0.8\textwidth,page=8]{why_dead}%
+\includegraphics<6->[width=0.8\textwidth,page=9]{why_dead}%
+\end{center}
+\end{figure}
+\item<4-> \alert{Alive path}: residual path between two alive nodes with no other alive nodes in between.
+\item<7-> Don't need to track potential of dead nodes.
+\end{itemize}
 \end{frame}
 
 % 16: alive paths in the BCP
 \begin{frame}{Hungarian search over alive paths}
+\begin{itemize}
+\item Alive paths have length 1, 2, or 3.
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.8\textwidth,page=1]{alive_paths}%
+\includegraphics<2>[width=0.8\textwidth,page=2]{alive_paths}%
+\includegraphics<3>[width=0.8\textwidth,page=3]{alive_paths}%
+\includegraphics<4>[width=0.8\textwidth,page=4]{alive_paths}%
+\includegraphics<5->[width=0.8\textwidth,page=5]{alive_paths}%
+\end{center}
+\end{figure}
+\item<5-> Telescoping on alive paths: $c_\pi(s \to a \to b) = c(a, b) - \pi(s) + \pi(b)$
+\item<6-> Can still use BCP.
+\end{itemize}
 \end{frame}
 
 % 17: # relaxations = O(|supp(f)|) = O(k)
 \begin{frame}{How many relaxations now?}
+\begin{itemize}
+\item $O(k)$ alive nodes.
+\item Every alive path relaxation adds another alive node to $X$.
+\item Thus, $O(k)$ relaxations.
+\end{itemize}
 \end{frame}
 
 % 18*: dead node potentials
 \begin{frame}{Dead node potentials}
+\begin{itemize}
+\item Dead nodes may become alive again after an augmentation.
+\item Also, at the end of a scale, we need potentials for all nodes.
+\item What's the right value for a dead node's potential?
+\vspace{10pt}
+\pause
+\begin{equation*}
+\pi(v) = \begin{cases}
+	\pi(s) & v \in A\\
+	\pi(t) & v \in B
+\end{cases}
+\end{equation*}
+\pause
+\item This choice preserves $\theta$-optimality and ensures that the component
+	arcs of an admissible alive path are admissible.
+\end{itemize}
 \end{frame}
 
 % 19: punchline running time: per-scale npolylogn pre, k\sqrt{k}polylogn per, O(log(n^q/\eps)) scales
 \begin{frame}{Cost-scaling time summary}
+\begin{itemize}
+\item $O(\log(n^q/\eps))$ scales.
+\item $O(\sqrt{k})$ iterations of refinement.
+\item Each blocking flow has size $O(k)$.
+\vspace{10pt}
+\pause
+\item Combine alive paths with previous ideas: rewinding and batched potential updates.
+\pause
+\item $O(k\polylog n)$ time for each Hungarian search and DFS (finding blocking flow).
+\pause
+\item $O(n\polylog n)$ to build the initial BCP data structures per scale.
+\vspace{10pt}
+\pause
+\item $O((n+k\sqrt{k})\polylog n)$ time per scale, $O(\log(n^q/\eps))$ scales, $(1+\eps)$-approx.
+\end{itemize}
 \end{frame}
-
-%TODO
 
 % end slide
 \begin{frame}{The End}
