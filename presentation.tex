@@ -1,5 +1,5 @@
-\documentclass[xcolor={dvipsnames,usenames}]{beamer}
-%\documentclass[xcolor={dvipsnames,usenames},handout]{beamer} % use this to compile w/o pauses
+%\documentclass[xcolor={dvipsnames,usenames}]{beamer}
+\documentclass[xcolor={dvipsnames,usenames},handout]{beamer} % use this to compile w/o pauses
 \mode<presentation>
 {
 \usetheme{Madrid}
@@ -10,11 +10,11 @@
 \usefonttheme[onlymath]{serif}
 }
 
-
 \usepackage{microtype}
 \usepackage[normalem]{ulem}
 %\usepackage{hyperref}
 %\hypersetup{colorlinks=true, urlcolor=Blue, citecolor=Green, linkcolor=BrickRed, breaklinks, unicode}
+\usepackage{textpos}
 
 \usepackage[nocompress]{cite}
 \usepackage{amsmath,mathtools}
@@ -64,6 +64,12 @@
 }
 \makeatother
 
+% student presentation bg image
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.95\textwidth,-0.9cm)
+\includegraphics[height=0.8cm,width=0.8cm]{StudentPresentation}
+\end{textblock*}}
+
 
 % make tables less packed
 \renewcommand{\arraystretch}{1.5}
@@ -91,6 +97,9 @@
 \def\abs#1{\mathopen| #1 \mathclose|}		% use instead of $|x|$
 \def\norm#1{\mathopen\| #1 \mathclose\|}	% use instead of $\|x\|$
 
+\def\arcto{\mathord\shortrightarrow}
+\def\arc#1#2{#1\arcto#2}
+
 \DeclareMathOperator{\cost}{cost}
 \newcommand{\tsupply}{\lambda}
 \newcommand{\fsupply}{\phi}
@@ -112,9 +121,26 @@
 \maketitle
 \end{frame}
 
+%1. Gentle example
+%2. Formal description/dual description
+%3. Some previous works comments, our alg time bounds
+%4. Ramshaw-Tarjan: Hung at k steps works (also, a cost-scaling algorithm)
+%5. Cost-scales/theta-opt outline
+%6. Reduction main ideas (integrality issue), sufficient initial condition, theta_under
+%7. Within a scale: O(k) excess refined into a circulation (mention blocking flow bound)
+%8. High-level goals: after O(npolylogn) preprocessing, execute refinement in O(kpolylogn) time per blocking flow
+%9. Refinement descr: Hung search + dfs
+%10. Brief review of Hung search (maybe cut), with potential, and BCP
+%11. Can't initialize the BCPs for every Hung search, rewind instead (example)
+%12. Hungarian search looks at useless things (example)
+%13. Dead/alive classification, alive paths
+%14. Relaxation with alive paths
+%15. Maybe? Details about potential bookkeeping
+
+
 % INTRO
 
-% 01: gentle example, emphasize cost fn
+% 01: gentle example, emphasize cost fn, and q>1
 \begin{frame}{Geometric (bipartite) matching}
 % two point sets in 2d, show cost fn (distance exponentitated to constant)
 \begin{figure}
@@ -124,7 +150,6 @@
 \includegraphics<3->[width=0.8\textwidth,page=3]{example}%
 \end{center}
 \end{figure}
-
 \end{frame}
 
 \begin{frame}{Geometric (bipartite) partial matching}
@@ -135,6 +160,130 @@
 \end{center}
 \end{figure}
 \end{frame}
+
+% 02: comments on prior work
+\begin{frame}{Prior work}
+\begin{center}
+\begin{tabular}{l | c | c | c}
+	work & approx. & time & valid $q$ \\
+	\hline
+	Hungarian algorithm (Kuhn) & $1$ & $O(k m + k^2 \log n)$ & $q\geq 1$ \\
+		& & $O(kn\polylog n)$ & \\
+	Ramshaw, Tarjan 2012 & \sout{$1$} & $O(m\sqrt{k}\log(kC))$ & $q\geq 1$ \\
+		& $(1+\eps)$ & $O(n\sqrt{k}\polylog n \log(1/\eps))$ & \\
+	\hline
+	Sharathkumar, Agarwal 2012 & $(1+\eps)$ & $O(n\poly(\log n, 1/\eps)$ & $q=1$ \\
+	\hline
+	new (Hungarian) & $1$ & $O((n + k^2)\polylog n)$ & $q > 1$ \\
+	new (cost-scaling) & $(1+\eps)$ & $O((n + k\sqrt{k})\polylog n \log(1/\eps))$ & $q > 1$ \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+% 03: as flow
+\begin{frame}{Unit-capacity min-cost flow formulation}
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=\textwidth,page=1]{pm-to-mcf}%
+\includegraphics<2>[width=\textwidth,page=2]{pm-to-mcf}%
+\includegraphics<3>[width=\textwidth,page=3]{pm-to-mcf}%
+\includegraphics<4>[width=\textwidth,page=4]{pm-to-mcf}%
+\includegraphics<5>[width=\textwidth,page=5]{pm-to-mcf}%
+\includegraphics<6>[width=\textwidth,page=6]{pm-to-mcf}%
+\includegraphics<7>[width=\textwidth,page=7]{pm-to-mcf}%
+\includegraphics<8->[width=\textwidth,page=8]{pm-to-mcf}%
+\end{center}
+\end{figure}
+\end{frame}
+
+% LP comments
+\begin{frame}{Primal-dual formulation and terminology}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.4\textwidth,page=8]{pm-to-mcf}%
+\end{center}
+\end{figure}
+\begin{itemize}
+\item \alert{primal} variables \alert{$f$}: 0-1 for each arc
+\item \alert{dual} variables \alert{$\pi$}: real values for each node
+\item \alert{Pseudoflow} may have imbalance, \alert{circulations} are balanced
+\item \alert{reduced cost}: $\alert{c_\pi(\arc vw)} \coloneqq c(\arc vw) - \pi(v) + \pi(w)$
+\vspace{5pt}
+\item dual feasibility: $c_\pi(\arc vw) \geq 0$ on all residual arcs
+\item \alert{$\theta$-optimality}: $c_\pi(\arc vw) \geq -\theta$ on all residual arcs
+\vspace{5pt}
+\item \alert{admissible} residual arcs: $c_\pi(\arc vw) \leq 0$ 
+\end{itemize}
+\end{frame}
+
+% 05 cost scaling
+\begin{frame}{Cost-scaling (Ramshaw-Tarjan)}
+\begin{itemize}
+\item \alert{$\theta$-optimality}: $c_\pi(\arc vw) \geq -\theta$ on all residual arcs
+\item \alert{admissible} residual arcs: $c_\pi(\arc vw) \leq 0$ 
+\vspace{15pt}
+\item $\theta$-optimality implies $+n\theta$ approx.
+\item Find $\theta$-optimal circulations for geometrically decreasing values of $\theta$:
+	\begin{enumerate}
+	\item Reduce $\theta \gets \theta/2$, while creating $O(k)$ excess.
+	\item \alert{Refine} this pseudoflow into a circulation, while preserving $\theta$-optimality
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+% 06 reduction
+\begin{frame}{Cost-scaling for geometric partial matching}
+%TODO figure
+\begin{itemize}
+\item $(1+\eps)$-approx. geometric partial matching reduces into executing $O(\log(n^q/\eps))$ cost scales.
+\end{itemize}
+\end{frame}
+
+% 07 within a scale (blocking flow bound)
+\begin{frame}
+\end{frame}
+
+% 08 high-level goals for runtime
+% 09 refinement description (h.s. + dfs)
+\begin{frame}{High-level goal per scale}
+\begin{itemize}
+\item After $O(n\polylog n)$-time preprocessing, find each blocking flow in $O(k\polylog n)$ time.
+\vspace{15pt}
+\item Hungarian search
+\item DFS through admissible residual arcs
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hungarian search with BCP}
+\end{frame}
+
+
+% 11 problem with bcp init
+\begin{frame}
+\end{frame}
+
+% 12 hung search looks at useless
+\begin{frame}
+\end{frame}
+
+% 13 dead/alive
+\begin{frame}
+\end{frame}
+
+% 14 relaxing alive paths
+\begin{frame}
+\end{frame}
+
+% 15 potential stuff?
+\begin{frame}
+\end{frame}
+
+%TODO
+\begin{frame}{TODO}
+\end{frame}
+
+
+
 
 % 03*: select prior work
 \begin{frame}{Issues for geometric perfect matching algorithms}
