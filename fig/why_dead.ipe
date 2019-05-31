@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
-<ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20190513062024" modified="D:20190513064340"/>
+<ipe version="70206" creator="Ipe 7.2.10">
+<info created="D:20190513062024" modified="D:20190530153808"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -305,7 +305,7 @@ h
 <text matrix="1 0 0 1 49.1581 -35.5031" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
 <text matrix="1 0 0 1 45.0616 -58.2614" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
 <text matrix="1 0 0 1 35.5032 -76.9232" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="18.278" height="7.713" depth="0.31" valign="baseline" size="large" style="math">&gt;0</text>
+<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
 <path layer="relaxations" stroke="black">
 176 560 m
 304 592 l
@@ -352,6 +352,7 @@ h
 384 336 m
 432 400 l
 </path>
+<text matrix="1 0 0 1 27.42 7.25894" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
 </page>
 <page>
 <layer name="alpha"/>
@@ -381,23 +382,23 @@ h
 128 560 m
 176 560 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 624 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 592 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 560 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 528 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 496 l
 </path>
@@ -407,21 +408,21 @@ h
 <text matrix="1 0 0 1 49.1581 -35.5031" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
 <text matrix="1 0 0 1 45.0616 -58.2614" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
 <text matrix="1 0 0 1 35.5032 -76.9232" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="18.278" height="7.713" depth="0.31" valign="baseline" size="large" style="math">&gt;0</text>
-<path layer="relaxations" stroke="darkred" pen="fat" arrow="normal/small">
+<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
+<path layer="relaxations" stroke="darkred" pen="fat">
 176 560 m
 304 592 l
 352 560 l
 </path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
+<path stroke="darkred" pen="fat">
 176 560 m
 304 560 l
 </path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
+<path stroke="darkred" pen="fat">
 176 560 m
 304 528 l
 </path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
+<path stroke="darkred" pen="fat">
 176 560 m
 304 496 l
 </path>
@@ -438,22 +439,23 @@ h
 384 464 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 432 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 400 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 368 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 336 m
 432 400 l
 </path>
+<text matrix="1 0 0 1 27.42 7.25894" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
 </page>
 <page>
 <layer name="alpha"/>
@@ -463,7 +465,7 @@ h
 <layer name="relaxations"/>
 <layer name="finish"/>
 <layer name="simplified"/>
-<view layers="alpha points edges costs relaxations finish" active="finish"/>
+<view layers="alpha points edges costs relaxations finish" active="edges"/>
 <use layer="points" name="mark/disk(sx)" pos="176 560" size="normal" stroke="red"/>
 <path matrix="0.916667 0 0 0.625 -53.3333 320" stroke="white">
 128 512 m
@@ -483,23 +485,23 @@ h
 128 560 m
 176 560 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 624 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 592 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 560 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 528 l
 </path>
-<path stroke="black" opacity="10%">
+<path stroke="black" opacity="30%">
 176 560 m
 304 496 l
 </path>
@@ -509,131 +511,29 @@ h
 <text matrix="1 0 0 1 49.1581 -35.5031" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
 <text matrix="1 0 0 1 45.0616 -58.2614" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
 <text matrix="1 0 0 1 35.5032 -76.9232" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="18.278" height="7.713" depth="0.31" valign="baseline" size="large" style="math">&gt;0</text>
-<path layer="relaxations" stroke="darkred" pen="fat" arrow="normal/small">
+<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
+<path layer="relaxations" stroke="darkred" pen="fat">
 176 560 m
 304 592 l
 352 560 l
 </path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
+<path stroke="darkred" pen="fat">
 176 560 m
 304 560 l
 </path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
+<path stroke="darkred" pen="fat">
 176 560 m
 304 528 l
 </path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
+<path stroke="darkred" pen="fat">
 176 560 m
 304 496 l
 </path>
-<path layer="finish" stroke="darkred" pen="fat" arrow="normal/small">
+<path layer="finish" stroke="darkred" pen="fat">
 352 560 m
 304 624 l
 </path>
-<path layer="simplified" stroke="darkred" pen="fat" arrow="normal/small">
-176 560 m
-304 592 l
-352 560 l
-</path>
-<path layer="edges" matrix="1 0 0 1 -80 160" stroke="black" pen="fat" opacity="10%">
-384 464 m
-432 400 l
-</path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
-384 432 m
-432 400 l
-</path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
-384 400 m
-432 400 l
-</path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
-384 368 m
-432 400 l
-</path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
-384 336 m
-432 400 l
-</path>
-</page>
-<page>
-<layer name="alpha"/>
-<layer name="points"/>
-<layer name="edges"/>
-<layer name="costs"/>
-<layer name="relaxations"/>
-<layer name="finish"/>
-<layer name="simplified"/>
-<view layers="alpha points edges costs simplified" active="finish"/>
-<use layer="points" name="mark/disk(sx)" pos="176 560" size="normal" stroke="red"/>
-<path matrix="0.916667 0 0 0.625 -53.3333 320" stroke="white">
-128 512 m
-128 256 l
-512 256 l
-512 512 l
-h
-</path>
-<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="208 400" size="normal" stroke="black"/>
-<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="432 400" size="normal" stroke="black"/>
-<use matrix="1 0 0 1 -80 144" name="mark/disk(sx)" pos="384 480" size="normal" stroke="blue"/>
-<use matrix="1 0 0 1 -80 144" name="mark/disk(sx)" pos="384 448" size="normal" stroke="blue"/>
-<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="384 400" size="normal" stroke="blue"/>
-<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="384 368" size="normal" stroke="blue"/>
-<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="384 336" size="normal" stroke="blue"/>
-<path layer="edges" stroke="black" pen="fat" opacity="50%">
-128 560 m
-176 560 l
-</path>
-<path stroke="black" opacity="10%">
-176 560 m
-304 624 l
-</path>
-<path stroke="black" opacity="10%">
-176 560 m
-304 592 l
-</path>
-<path stroke="black" opacity="10%">
-176 560 m
-304 560 l
-</path>
-<path stroke="black" opacity="10%">
-176 560 m
-304 528 l
-</path>
-<path stroke="black" opacity="10%">
-176 560 m
-304 496 l
-</path>
-<text layer="points" matrix="1 0 0 1 -80 160" transformations="translations" pos="190.5 396.769" stroke="black" type="label" width="6.617" height="6.177" depth="0" valign="baseline" size="Large" style="math">s</text>
-<text matrix="1 0 0 1 -80 160" transformations="translations" pos="446.654 396.769" stroke="black" type="label" width="5.073" height="8.824" depth="0" valign="baseline" size="Large" style="math">t</text>
-<text layer="costs" matrix="1 0 0 1 43.6961 -11.8344" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 49.1581 -35.5031" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 45.0616 -58.2614" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 35.5032 -76.9232" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
-<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="18.278" height="7.713" depth="0.31" valign="baseline" size="large" style="math">&gt;0</text>
-<path layer="relaxations" stroke="darkred" pen="fat" arrow="normal/small">
-176 560 m
-304 592 l
-352 560 l
-</path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
-176 560 m
-304 560 l
-</path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
-176 560 m
-304 528 l
-</path>
-<path stroke="darkred" pen="fat" arrow="normal/small">
-176 560 m
-304 496 l
-</path>
-<path layer="finish" stroke="darkred" pen="fat" arrow="normal/small">
-352 560 m
-304 624 l
-</path>
-<path layer="simplified" stroke="darkred" pen="fat" arrow="normal/small">
+<path layer="simplified" stroke="black">
 176 560 m
 304 592 l
 352 560 l
@@ -642,22 +542,114 @@ h
 384 464 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 432 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 400 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 368 m
 432 400 l
 </path>
-<path matrix="1 0 0 1 -80 160" stroke="black" opacity="10%">
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
 384 336 m
 432 400 l
 </path>
+<text matrix="1 0 0 1 27.42 7.25894" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="edges"/>
+<layer name="costs"/>
+<layer name="relaxations"/>
+<layer name="finish"/>
+<layer name="simplified"/>
+<view layers="alpha points edges costs relaxations" active="edges"/>
+<use layer="points" name="mark/disk(sx)" pos="176 560" size="normal" stroke="red"/>
+<path matrix="0.916667 0 0 0.625 -53.3333 320" stroke="white">
+128 512 m
+128 256 l
+512 256 l
+512 512 l
+h
+</path>
+<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="208 400" size="normal" stroke="black"/>
+<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="432 400" size="normal" stroke="black"/>
+<use matrix="1 0 0 1 -80 144" name="mark/disk(sx)" pos="384 480" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 -80 144" name="mark/disk(sx)" pos="384 448" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="384 400" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="384 368" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 -80 160" name="mark/disk(sx)" pos="384 336" size="normal" stroke="blue"/>
+<path layer="edges" stroke="black" pen="fat" opacity="50%">
+128 560 m
+176 560 l
+</path>
+<path stroke="black" opacity="30%">
+176 560 m
+304 624 l
+</path>
+<path stroke="black" opacity="30%">
+176 560 m
+304 592 l
+</path>
+<path stroke="black" opacity="30%">
+176 560 m
+304 560 l
+</path>
+<path stroke="black" opacity="30%">
+176 560 m
+304 528 l
+</path>
+<path stroke="black" opacity="30%">
+176 560 m
+304 496 l
+</path>
+<text layer="points" matrix="1 0 0 1 -80 160" transformations="translations" pos="190.5 396.769" stroke="black" type="label" width="6.617" height="6.177" depth="0" valign="baseline" size="Large" style="math">s</text>
+<text matrix="1 0 0 1 -80 160" transformations="translations" pos="446.654 396.769" stroke="black" type="label" width="5.073" height="8.824" depth="0" valign="baseline" size="Large" style="math">t</text>
+<text layer="costs" matrix="1 0 0 1 43.6961 -11.8344" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
+<text matrix="1 0 0 1 49.1581 -35.5031" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
+<text matrix="1 0 0 1 45.0616 -58.2614" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
+<text matrix="1 0 0 1 35.5032 -76.9232" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">0</text>
+<text matrix="1 0 0 1 107.42 -1.82036" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
+<path layer="relaxations" stroke="darkred" pen="fat">
+176 560 m
+304 592 l
+352 560 l
+</path>
+<path layer="finish" stroke="black">
+352 560 m
+304 624 l
+</path>
+<path layer="simplified" stroke="black">
+176 560 m
+304 592 l
+352 560 l
+</path>
+<path layer="edges" matrix="1 0 0 1 -80 160" stroke="black" pen="fat" opacity="50%">
+384 464 m
+432 400 l
+</path>
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
+384 432 m
+432 400 l
+</path>
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
+384 400 m
+432 400 l
+</path>
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
+384 368 m
+432 400 l
+</path>
+<path matrix="1 0 0 1 -80 160" stroke="black" opacity="30%">
+384 336 m
+432 400 l
+</path>
+<text matrix="1 0 0 1 27.42 7.25894" transformations="translations" pos="222.781 597.233" stroke="black" type="label" width="5.853" height="7.704" depth="0" valign="baseline" size="large" style="math">1</text>
 </page>
 <page>
 <layer name="alpha"/>
