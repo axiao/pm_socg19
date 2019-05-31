@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.10">
-<info created="D:20190531063245" modified="D:20190531063311"/>
+<info created="D:20190531063245" modified="D:20190531162832"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -257,7 +257,7 @@ h
 <layer name="mst"/>
 <layer name="clust"/>
 <layer name="rank"/>
-<view layers="alpha points" active="rank"/>
+<view layers="alpha points rank" active="rank"/>
 <path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
 128 704 m
 128 512 l
@@ -334,14 +334,14 @@ h
 416 624 m
 384 672 l
 </path>
-<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">1</text>
-<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">2</text>
-<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">3</text>
-<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">4</text>
-<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">5</text>
-<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">6</text>
-<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">7</text>
-<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">8</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
 </page>
 <page>
 <layer name="alpha"/>
@@ -426,14 +426,14 @@ h
 416 624 m
 384 672 l
 </path>
-<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">1</text>
-<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">2</text>
-<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">3</text>
-<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">4</text>
-<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">5</text>
-<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">6</text>
-<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">7</text>
-<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">8</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
 </page>
 <page>
 <layer name="alpha"/>
@@ -518,13 +518,647 @@ h
 416 624 m
 384 672 l
 </path>
-<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">1</text>
-<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">2</text>
-<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">3</text>
-<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">4</text>
-<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">5</text>
-<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">6</text>
-<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">7</text>
-<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="4.981" height="6.42" depth="0" valign="baseline" style="math">8</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="mst"/>
+<layer name="clust"/>
+<layer name="rank"/>
+<layer name="M"/>
+<layer name="k"/>
+<view layers="alpha points clust rank k" active="rank"/>
+<path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
+128 704 m
+128 512 l
+448 512 l
+448 704 l
+h
+</path>
+<use layer="points" name="mark/disk(sx)" pos="192 672" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 624" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="240 608" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="224 640" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="352 560" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 560" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="384 672" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="400 592" size="normal" stroke="blue"/>
+<path layer="mst" stroke="black">
+192 672 m
+224 640 l
+</path>
+<path stroke="black">
+224 640 m
+240 608 l
+</path>
+<path stroke="black">
+240 608 m
+288 560 l
+</path>
+<path stroke="black">
+240 608 m
+288 624 l
+</path>
+<path stroke="black">
+288 560 m
+352 560 l
+</path>
+<path stroke="black">
+352 560 m
+400 592 l
+</path>
+<path stroke="black">
+400 592 m
+416 624 l
+</path>
+<path stroke="black">
+416 624 m
+384 672 l
+</path>
+<path layer="clust" stroke="black" opacity="30%">
+192 672 m
+224 640 l
+</path>
+<path stroke="black" opacity="30%">
+224 640 m
+240 608 l
+</path>
+<path stroke="black" opacity="30%">
+240 608 m
+288 624 l
+</path>
+<path stroke="black" opacity="30%">
+288 560 m
+352 560 l
+</path>
+<path stroke="black" opacity="30%">
+352 560 m
+400 592 l
+</path>
+<path stroke="black" opacity="30%">
+400 592 m
+416 624 l
+</path>
+<path stroke="black" opacity="30%">
+416 624 m
+384 672 l
+</path>
+<path layer="M" stroke="black" pen="fat">
+192 672 m
+240 608 l
+</path>
+<path stroke="black" pen="fat">
+224 640 m
+288 624 l
+</path>
+<path stroke="black" pen="fat">
+288 560 m
+416 624 l
+</path>
+<path stroke="black" pen="fat">
+384 672 m
+352 560 l
+</path>
+<text layer="k" matrix="1 0 0 1 0 -16" transformations="translations" pos="304 672" stroke="black" type="label" width="23.765" height="6.918" depth="0" valign="baseline" style="math">k=4</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="mst"/>
+<layer name="clust"/>
+<layer name="rank"/>
+<layer name="M"/>
+<layer name="k"/>
+<view layers="alpha points clust rank M k" active="rank"/>
+<path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
+128 704 m
+128 512 l
+448 512 l
+448 704 l
+h
+</path>
+<use layer="points" name="mark/disk(sx)" pos="192 672" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 624" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="240 608" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="224 640" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="352 560" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 560" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="384 672" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="400 592" size="normal" stroke="blue"/>
+<path layer="mst" stroke="black">
+192 672 m
+224 640 l
+</path>
+<path stroke="black">
+224 640 m
+240 608 l
+</path>
+<path stroke="black">
+240 608 m
+288 560 l
+</path>
+<path stroke="black">
+240 608 m
+288 624 l
+</path>
+<path stroke="black">
+288 560 m
+352 560 l
+</path>
+<path stroke="black">
+352 560 m
+400 592 l
+</path>
+<path stroke="black">
+400 592 m
+416 624 l
+</path>
+<path stroke="black">
+416 624 m
+384 672 l
+</path>
+<path layer="clust" stroke="black" opacity="30%">
+192 672 m
+224 640 l
+</path>
+<path stroke="black" opacity="30%">
+224 640 m
+240 608 l
+</path>
+<path stroke="black" opacity="30%">
+240 608 m
+288 624 l
+</path>
+<path stroke="black" opacity="30%">
+288 560 m
+352 560 l
+</path>
+<path stroke="black" opacity="30%">
+352 560 m
+400 592 l
+</path>
+<path stroke="black" opacity="30%">
+400 592 m
+416 624 l
+</path>
+<path stroke="black" opacity="30%">
+416 624 m
+384 672 l
+</path>
+<path layer="M" stroke="black" pen="fat">
+192 672 m
+240 608 l
+</path>
+<path stroke="black" pen="fat">
+224 640 m
+288 624 l
+</path>
+<path stroke="black" pen="fat">
+288 560 m
+416 624 l
+</path>
+<path stroke="black" pen="fat">
+384 672 m
+352 560 l
+</path>
+<text layer="k" matrix="1 0 0 1 0 -16" transformations="translations" pos="304 672" stroke="black" type="label" width="23.765" height="6.918" depth="0" valign="baseline" style="math">k=4</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="mst"/>
+<layer name="clust"/>
+<layer name="rank"/>
+<layer name="M"/>
+<layer name="k"/>
+<view layers="alpha points clust rank k" active="rank"/>
+<path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
+128 704 m
+128 512 l
+448 512 l
+448 704 l
+h
+</path>
+<use layer="points" name="mark/disk(sx)" pos="192 672" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 624" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="240 608" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="224 640" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="352 560" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 560" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="384 672" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="400 592" size="normal" stroke="blue"/>
+<path layer="mst" stroke="black">
+192 672 m
+224 640 l
+</path>
+<path stroke="black">
+224 640 m
+240 608 l
+</path>
+<path stroke="black">
+240 608 m
+288 560 l
+</path>
+<path stroke="black">
+240 608 m
+288 624 l
+</path>
+<path stroke="black">
+288 560 m
+352 560 l
+</path>
+<path stroke="black">
+352 560 m
+400 592 l
+</path>
+<path stroke="black">
+400 592 m
+416 624 l
+</path>
+<path stroke="black">
+416 624 m
+384 672 l
+</path>
+<path layer="clust" stroke="black" opacity="30%">
+192 672 m
+224 640 l
+</path>
+<path stroke="black" opacity="30%">
+224 640 m
+240 608 l
+</path>
+<path stroke="black" opacity="30%">
+240 608 m
+288 624 l
+</path>
+<path stroke="black" opacity="30%">
+288 560 m
+352 560 l
+</path>
+<path stroke="black" opacity="30%">
+400 592 m
+416 624 l
+</path>
+<path stroke="black" opacity="30%">
+416 624 m
+384 672 l
+</path>
+<path layer="M" stroke="black" pen="fat">
+192 672 m
+240 608 l
+</path>
+<path stroke="black" pen="fat">
+224 640 m
+288 624 l
+</path>
+<path stroke="black" pen="fat">
+352 560 m
+288 560 l
+</path>
+<path stroke="black" pen="fat">
+416 624 m
+400 592 l
+</path>
+<text layer="k" matrix="1 0 0 1 0 -16" transformations="translations" pos="304 672" stroke="black" type="label" width="23.765" height="6.918" depth="0" valign="baseline" style="math">k=4</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="mst"/>
+<layer name="clust"/>
+<layer name="rank"/>
+<layer name="M"/>
+<layer name="k"/>
+<view layers="alpha points clust rank M k" active="rank"/>
+<path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
+128 704 m
+128 512 l
+448 512 l
+448 704 l
+h
+</path>
+<use layer="points" name="mark/disk(sx)" pos="192 672" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 624" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="240 608" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="224 640" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="352 560" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 560" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="384 672" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="400 592" size="normal" stroke="blue"/>
+<path layer="mst" stroke="black">
+192 672 m
+224 640 l
+</path>
+<path stroke="black">
+224 640 m
+240 608 l
+</path>
+<path stroke="black">
+240 608 m
+288 560 l
+</path>
+<path stroke="black">
+240 608 m
+288 624 l
+</path>
+<path stroke="black">
+288 560 m
+352 560 l
+</path>
+<path stroke="black">
+352 560 m
+400 592 l
+</path>
+<path stroke="black">
+400 592 m
+416 624 l
+</path>
+<path stroke="black">
+416 624 m
+384 672 l
+</path>
+<path layer="clust" stroke="black" opacity="30%">
+192 672 m
+224 640 l
+</path>
+<path stroke="black" opacity="30%">
+224 640 m
+240 608 l
+</path>
+<path stroke="black" opacity="30%">
+240 608 m
+288 624 l
+</path>
+<path stroke="black" opacity="30%">
+288 560 m
+352 560 l
+</path>
+<path stroke="black" opacity="30%">
+400 592 m
+416 624 l
+</path>
+<path stroke="black" opacity="30%">
+416 624 m
+384 672 l
+</path>
+<path layer="M" stroke="black" pen="fat">
+192 672 m
+240 608 l
+</path>
+<path stroke="black" pen="fat">
+224 640 m
+288 624 l
+</path>
+<path stroke="black" pen="fat">
+352 560 m
+288 560 l
+</path>
+<path stroke="black" pen="fat">
+416 624 m
+400 592 l
+</path>
+<text layer="k" matrix="1 0 0 1 0 -16" transformations="translations" pos="304 672" stroke="black" type="label" width="23.765" height="6.918" depth="0" valign="baseline" style="math">k=4</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="mst"/>
+<layer name="clust"/>
+<layer name="rank"/>
+<layer name="M"/>
+<layer name="k"/>
+<view layers="alpha points clust rank k" active="rank"/>
+<path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
+128 704 m
+128 512 l
+448 512 l
+448 704 l
+h
+</path>
+<use layer="points" name="mark/disk(sx)" pos="192 672" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 624" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="240 608" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="224 640" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="352 560" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 560" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="384 672" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="400 592" size="normal" stroke="blue"/>
+<path layer="mst" stroke="black">
+192 672 m
+224 640 l
+</path>
+<path stroke="black">
+224 640 m
+240 608 l
+</path>
+<path stroke="black">
+240 608 m
+288 560 l
+</path>
+<path stroke="black">
+240 608 m
+288 624 l
+</path>
+<path stroke="black">
+288 560 m
+352 560 l
+</path>
+<path stroke="black">
+352 560 m
+400 592 l
+</path>
+<path stroke="black">
+400 592 m
+416 624 l
+</path>
+<path stroke="black">
+416 624 m
+384 672 l
+</path>
+<path layer="clust" stroke="black" opacity="30%">
+192 672 m
+224 640 l
+</path>
+<path stroke="black" opacity="30%">
+224 640 m
+240 608 l
+</path>
+<path stroke="black" opacity="30%">
+240 608 m
+288 624 l
+</path>
+<path stroke="black" opacity="30%">
+400 592 m
+416 624 l
+</path>
+<path stroke="black" opacity="30%">
+416 624 m
+384 672 l
+</path>
+<path layer="M" stroke="black" pen="fat">
+192 672 m
+240 608 l
+</path>
+<path stroke="black" pen="fat">
+224 640 m
+288 624 l
+</path>
+<path stroke="black" pen="fat">
+416 624 m
+400 592 l
+</path>
+<text layer="k" matrix="1 0 0 1 0 -16" transformations="translations" pos="304 672" stroke="black" type="label" width="23.765" height="6.918" depth="0" valign="baseline" style="math">k=4</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="points"/>
+<layer name="mst"/>
+<layer name="clust"/>
+<layer name="rank"/>
+<layer name="M"/>
+<layer name="k"/>
+<view layers="alpha points clust rank M k" active="rank"/>
+<path layer="alpha" matrix="0.9 0 0 0.916667 44.8 58.6667" stroke="white">
+128 704 m
+128 512 l
+448 512 l
+448 704 l
+h
+</path>
+<use layer="points" name="mark/disk(sx)" pos="192 672" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 624" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="240 608" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="224 640" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="352 560" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="288 560" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="384 672" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="400 592" size="normal" stroke="blue"/>
+<path layer="mst" stroke="black">
+192 672 m
+224 640 l
+</path>
+<path stroke="black">
+224 640 m
+240 608 l
+</path>
+<path stroke="black">
+240 608 m
+288 560 l
+</path>
+<path stroke="black">
+240 608 m
+288 624 l
+</path>
+<path stroke="black">
+288 560 m
+352 560 l
+</path>
+<path stroke="black">
+352 560 m
+400 592 l
+</path>
+<path stroke="black">
+400 592 m
+416 624 l
+</path>
+<path stroke="black">
+416 624 m
+384 672 l
+</path>
+<path layer="clust" stroke="black" opacity="30%">
+192 672 m
+224 640 l
+</path>
+<path stroke="black" opacity="30%">
+224 640 m
+240 608 l
+</path>
+<path stroke="black" opacity="30%">
+240 608 m
+288 624 l
+</path>
+<path stroke="black" opacity="30%">
+400 592 m
+416 624 l
+</path>
+<path stroke="black" opacity="30%">
+416 624 m
+384 672 l
+</path>
+<path layer="M" stroke="black" pen="fat">
+192 672 m
+240 608 l
+</path>
+<path stroke="black" pen="fat">
+224 640 m
+288 624 l
+</path>
+<path stroke="black" pen="fat">
+416 624 m
+400 592 l
+</path>
+<text layer="k" matrix="1 0 0 1 0 -16" transformations="translations" pos="304 672" stroke="black" type="label" width="23.765" height="6.918" depth="0" valign="baseline" style="math">k=4</text>
+<text layer="rank" matrix="1 0 0 1 -19.7979 -3.71211" transformations="translations" pos="240.864 624.78" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_1</text>
+<text matrix="1 0 0 1 199.836 -56.9191" transformations="translations" pos="212.714 657.261" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_2</text>
+<text transformations="translations" pos="213.332 657.88" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_3</text>
+<text transformations="translations" pos="267.467 622.306" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_4</text>
+<text transformations="translations" pos="380.687 564.149" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_7</text>
+<text transformations="translations" pos="408.837 650.146" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_5</text>
+<text transformations="translations" pos="316.344 546.981" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_6</text>
+<text transformations="translations" pos="257.568 574.821" stroke="black" type="label" width="9.108" height="4.294" depth="1.49" valign="baseline" style="math">e_8</text>
 </page>
 </ipe>

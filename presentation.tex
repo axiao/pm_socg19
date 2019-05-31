@@ -201,18 +201,20 @@
 
 % LP comments
 \begin{frame}{Flow terminology}
-%TODO replace figure with mcf rotating definitions
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.4\textwidth,page=8]{pm-to-mcf}%
+\includegraphics<1>[width=0.8\textwidth,page=1]{flow_terms}%
+\includegraphics<2>[width=0.8\textwidth,page=2]{flow_terms}%
+\includegraphics<3>[width=0.8\textwidth,page=3]{flow_terms}%
+\includegraphics<4>[width=0.8\textwidth,page=4]{flow_terms}%
+\includegraphics<5->[width=0.8\textwidth,page=5]{flow_terms}%
 \end{center}
 \end{figure}
-\vspace{5pt}
 \begin{itemize}
 %\item \alert{Pseudoflow} may have imbalance, \alert{circulations} are balanced
-\item $\alert{c_\pi(\arc vw)} \coloneqq c(\arc vw) - \pi(v) + \pi(w)$
-\item \alert{$\theta$-optimality}: $c_\pi(\arc vw) \geq -\theta$ on all residual arcs
-\item \alert{admissible} residual arcs: $c_\pi(\arc vw) \leq 0$ 
+\item<4-> Reduced cost: $\alert{c_\pi(\arc vw)} \coloneqq c(\arc vw) - \pi(v) + \pi(w)$
+\item<6-> \alert{$\theta$-optimality}: $c_\pi(\arc vw) \geq -\theta$ on all residual arcs
+\item<6-> \alert{admissible} residual arcs: $c_\pi(\arc vw) \leq 0$ 
 \end{itemize}
 \end{frame}
 
@@ -234,9 +236,8 @@
 \begin{frame}{Cost-scaling (Ramshaw-Tarjan)}
 \begin{itemize}
 \item \alert{$\theta$-optimality}: $c_\pi(\arc vw) \geq -\theta$ on all residual arcs
-\item \alert{admissible} residual arcs: $c_\pi(\arc vw) \leq 0$ 
 \vspace{15pt}
-\item $\theta$-optimal circulation is $+n\theta$ approx.
+\item $\theta$-optimal circulation is $+n\theta$ approx.~in general ($+6k\theta$ in our graph).
 \vspace{15pt}
 \item Find $\theta$-optimal circulations for geometrically decreasing values of $\theta$:
 	\begin{enumerate}
@@ -248,17 +249,26 @@
 
 % 06 reduction
 \begin{frame}{Cost-scaling for geometric partial matching}
-%TODO add a pic showing intra-cluster k-matching
 \begin{figure}
 \begin{center}
 \includegraphics<1>[width=0.7\textwidth,page=1]{single-linkage_clustering}%
 \includegraphics<2>[width=0.7\textwidth,page=2]{single-linkage_clustering}%
-\includegraphics<3->[width=0.7\textwidth,page=3]{single-linkage_clustering}%
+\includegraphics<3>[width=0.7\textwidth,page=3]{single-linkage_clustering}%
+\includegraphics<4>[width=0.7\textwidth,page=4]{single-linkage_clustering}%
+\includegraphics<5>[width=0.7\textwidth,page=5]{single-linkage_clustering}%
+\includegraphics<6>[width=0.7\textwidth,page=6]{single-linkage_clustering}%
+\includegraphics<7>[width=0.7\textwidth,page=7]{single-linkage_clustering}%
+\includegraphics<8>[width=0.7\textwidth,page=8]{single-linkage_clustering}%
+\includegraphics<9->[width=0.7\textwidth,page=9]{single-linkage_clustering}%
 \end{center}
 \end{figure}
 \begin{itemize}
-\item<4-> There exists a $k$-matching whose longest edge is $(n^q\cdot\alpha)$, and a $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
-\item<5-> $(1+\eps)$-approx. geometric partial matching reduces into executing $O(\log(n^q/\eps))$ cost scales.
+\item<1-> Compute $\alpha \geq 0$ satisfying:
+	\begin{enumerate}
+	\item there exists a $k$-matching whose longest edge has cost $\leq n^q\cdot\alpha$
+	\item a $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
+	\end{enumerate}
+\item<11-> $(1+\eps)$-approx. geometric partial matching by executing $O(\log(n^q/\eps))$ cost scales.
 \end{itemize}
 \end{frame}
 
@@ -312,6 +322,7 @@
 \end{figure}
 \begin{itemize}
 \item<4-> Dynamic 2D BCP with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
+\item<10-> Possible to batch potential updates (Vaidya) --- only need to bound number of relaxations.
 \end{itemize}
 \end{frame}
 
@@ -342,7 +353,7 @@
 \end{center}
 \end{figure}
 \item<4-> \alert{Alive path}: residual path between two alive nodes with no other alive nodes in between.
-\item<7-> Don't need to track potential of dead nodes.
+%\item<7-> Don't need to track potential of dead nodes.
 \end{itemize}
 \end{frame}
 
@@ -382,13 +393,13 @@
 \begin{frame}{Initial BCP by rewinding}
 \begin{figure}
 \begin{center}
-\includegraphics<1>[width=0.8\textwidth,page=1]{bcp_init}%
-\includegraphics<2>[width=0.8\textwidth,page=2]{bcp_init}%
-\includegraphics<3>[width=0.8\textwidth,page=3]{bcp_init}%
-\includegraphics<4>[width=0.8\textwidth,page=4]{bcp_init}%
-\includegraphics<5>[width=0.8\textwidth,page=5]{bcp_init}%
-\includegraphics<6>[width=0.8\textwidth,page=6]{bcp_init}%
-\includegraphics<7->[width=0.8\textwidth,page=7]{bcp_init}%
+\includegraphics<1>[width=0.7\textwidth,page=1]{bcp_init}%
+\includegraphics<2>[width=0.7\textwidth,page=2]{bcp_init}%
+\includegraphics<3>[width=0.7\textwidth,page=3]{bcp_init}%
+\includegraphics<4>[width=0.7\textwidth,page=4]{bcp_init}%
+\includegraphics<5>[width=0.7\textwidth,page=5]{bcp_init}%
+\includegraphics<6>[width=0.7\textwidth,page=6]{bcp_init}%
+\includegraphics<7->[width=0.7\textwidth,page=7]{bcp_init}%
 \end{center}
 \end{figure}
 \begin{itemize}
@@ -397,7 +408,7 @@
 	Same number of BCP updates as the Hungarian search.
 \item<9-> Persistence?
 \vspace{10pt}
-\item<10-> Construct once ($O(n\polylog n)$), then $O(k\polylog n)$ time to rewind and generate the next BCP.
+\item<10-> Construct once in $O(n\polylog n)$, then spend $O(k\polylog n)$ to rewind and generate the next BCP.
 \end{itemize}
 \end{frame}
 
