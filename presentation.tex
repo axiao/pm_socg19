@@ -248,9 +248,17 @@
 
 % 06 reduction
 \begin{frame}{Cost-scaling for geometric partial matching}
-%TODO figure
+%TODO add a pic showing intra-cluster k-matching
+\begin{figure}
+\begin{center}
+\includegraphics<1>[width=0.7\textwidth,page=1]{single-linkage_clustering}%
+\includegraphics<2>[width=0.7\textwidth,page=2]{single-linkage_clustering}%
+\includegraphics<3->[width=0.7\textwidth,page=3]{single-linkage_clustering}%
+\end{center}
+\end{figure}
 \begin{itemize}
-\item $(1+\eps)$-approx. geometric partial matching reduces into executing $O(\log(n^q/\eps))$ cost scales.
+\item<4-> There exists a $k$-matching whose longest edge is $(n^q\cdot\alpha)$, and a $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
+\item<5-> $(1+\eps)$-approx. geometric partial matching reduces into executing $O(\log(n^q/\eps))$ cost scales.
 \end{itemize}
 \end{frame}
 
@@ -344,21 +352,31 @@
 \item Alive paths have length 1, 2, or 3.
 \begin{figure}
 \begin{center}
-\includegraphics<1>[width=0.8\textwidth,page=1]{alive_paths}%
-\includegraphics<2>[width=0.8\textwidth,page=2]{alive_paths}%
-\includegraphics<3>[width=0.8\textwidth,page=3]{alive_paths}%
-\includegraphics<4>[width=0.8\textwidth,page=4]{alive_paths}%
-\includegraphics<5->[width=0.8\textwidth,page=5]{alive_paths}%
+\includegraphics<1>[width=0.7\textwidth,page=1]{alive_paths}%
+\includegraphics<2>[width=0.7\textwidth,page=2]{alive_paths}%
+\includegraphics<3>[width=0.7\textwidth,page=3]{alive_paths}%
+\includegraphics<4>[width=0.7\textwidth,page=4]{alive_paths}%
+\includegraphics<5->[width=0.7\textwidth,page=5]{alive_paths}%
 \end{center}
 \end{figure}
 \item<5-> Telescoping: $c_\pi(s \arcto a \arcto b) = c(\arc ab) - \pi(s) + \pi(b)$ (use BCP)
 \item<6-> Only $O(k)$ relaxations per Hungarian search.
+\item<7-> Also: find a blocking flow in $O(k)$ relaxations (DFS).
 \end{itemize}
 \end{frame}
 
 % 11 problem with bcp init
 \begin{frame}{Problem: BCP initialization}
-%TODO figure
+\begin{itemize}
+\item Dynamic 2D BCP with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.8\textwidth,page=6]{why_dead}%
+\end{center}
+\end{figure}
+\item Some BCP may begin a Hungarian search with $\Theta(n)$ vertices.
+\item Can't afford to construct from scratch for every Hungarian search.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Initial BCP by rewinding}
@@ -378,6 +396,8 @@
 \item<8-> Generate $X_{t+1}$ by \alert{rewinding} the BCP updates done on $X_t$, then deleting the newly-matched nodes. \\
 	Same number of BCP updates as the Hungarian search.
 \item<9-> Persistence?
+\vspace{10pt}
+\item<10-> Construct once ($O(n\polylog n)$), then $O(k\polylog n)$ time to rewind and generate the next BCP.
 \end{itemize}
 \end{frame}
 
