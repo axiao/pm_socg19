@@ -393,22 +393,38 @@
 \begin{frame}{Initial BCP by rewinding}
 \begin{figure}
 \begin{center}
-\includegraphics<1>[width=0.7\textwidth,page=1]{bcp_init}%
-\includegraphics<2>[width=0.7\textwidth,page=2]{bcp_init}%
-\includegraphics<3>[width=0.7\textwidth,page=3]{bcp_init}%
-\includegraphics<4>[width=0.7\textwidth,page=4]{bcp_init}%
-\includegraphics<5>[width=0.7\textwidth,page=5]{bcp_init}%
-\includegraphics<6>[width=0.7\textwidth,page=6]{bcp_init}%
-\includegraphics<7->[width=0.7\textwidth,page=7]{bcp_init}%
+\includegraphics<1>[width=0.6\textwidth,page=1]{bcp_init}%
+\includegraphics<2>[width=0.6\textwidth,page=2]{bcp_init}%
+\includegraphics<3>[width=0.6\textwidth,page=3]{bcp_init}%
+\includegraphics<4>[width=0.6\textwidth,page=4]{bcp_init}%
+\includegraphics<5>[width=0.6\textwidth,page=5]{bcp_init}%
+\includegraphics<6>[width=0.6\textwidth,page=6]{bcp_init}%
+\includegraphics<7->[width=0.6\textwidth,page=7]{bcp_init}%
 \end{center}
 \end{figure}
 \begin{itemize}
-\item<7-> $X_t$ and $X_{t+1}$ differ by the newly-matched $A$ nodes.
-\item<8-> Generate $X_{t+1}$ by \alert{rewinding} the BCP updates done on $X_t$, then deleting the newly-matched nodes. \\
-	Same number of BCP updates as the Hungarian search.
+\item<1-> Let $X_t$ be the set $X$ at the start of the $t$-th Hungarian search.
+\item<7-> $X_t$ and $X_{t+1}$ differ by only a few nodes (newly matched, dead/alive changes).
+\item<8-> To generate $X_{t+1}$:
+	\begin{enumerate}
+	\item \alert{Rewind} the BCP updates of the last Hungarian search to obtain $X_t$.
+	\item Apply the few changes (newly matched, dead/alive).
+	\end{enumerate}
 \item<9-> Persistence?
-\vspace{10pt}
-\item<10-> Construct once in $O(n\polylog n)$, then spend $O(k\polylog n)$ to rewind and generate the next BCP.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item $O(\log(n^q/\eps))$ scales, $O(\sqrt{k})$ blocking flows per scale.
+\pause
+\item Each blocking flow's Hungarian search uses $O(k)$ relaxations (\alert{alive paths}).
+\pause
+\item Each blocking flow's Hungarian search BCP can be initialized using the previous one in $O(k\polylog n)$ time (\alert{rewinding}).
+	Need to spend $O(n\polylog n)$ once per scale to build data structures for $t=0$.
+\pause
+\vspace{20pt}
+\item Thank you.
 \end{itemize}
 \end{frame}
 
@@ -417,11 +433,11 @@
 %\end{frame}
 
 % end slide
-\begin{frame}{The End}
-\begin{center}
-	Thank you.
-\end{center}
-\end{frame}
+%\begin{frame}{The End}
+%\begin{center}
+%	Thank you.
+%\end{center}
+%\end{frame}
 
 %\begin{frame}[allowframebreaks]{Citations}
 %\tiny
