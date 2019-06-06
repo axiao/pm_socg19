@@ -117,6 +117,7 @@
 \begin{document}
 
 
+% ``welcome to my talk''
 \begin{frame}
 \maketitle
 \end{frame}
@@ -141,6 +142,11 @@
 % INTRO
 
 % 01: gentle example, emphasize cost fn, and q>1
+% given two point sets in the plane of equal size, correspond their points
+% in the context of this talk, always bipartite
+% cost: distance to the q-th power
+% q=1 sum of distances, say a p-norm
+% q=2 sum of squares of distances, (lose triangle inequality)
 \begin{frame}{Geometric (bipartite) matching}
 % two point sets in 2d, show cost fn (distance exponentitated to constant)
 \begin{figure}
@@ -152,6 +158,7 @@
 \end{figure}
 \end{frame}
 
+% partial: only need to match k
 \begin{frame}{Geometric (bipartite) partial matching}
 % only k pairs
 \begin{figure}
@@ -162,6 +169,10 @@
 \end{frame}
 
 % 02: comments on prior work
+% can express as matching on a complete bipartite
+% some combinatorial algorithms for the general graph problem include Hung, RT
+% geometrization using existing techniques
+% SA uses different geometric techniques, relies on triangle inequality so q=1
 \begin{frame}{Prior work}
 \begin{center}
 \resizebox{\textwidth}{!}{%
@@ -390,6 +401,13 @@
 \end{itemize}
 \end{frame}
 
+% green boxes: initial BCP sets for t-th
+% ``excess alive A'' on left, ``alive B'' on right (in this BCP)
+% suppose a blocking flow like this, what changes? (this matched, this dead)
+% so the next initial BCP is this
+% without going into detail, key observation is that initial BCPs differ by only a few points, which we can charge to the blocking flow
+% rewind --- undo by applying reverse operation
+% can't use persistence out of the box due to amortized update; would have liked to
 \begin{frame}{Initial BCP by rewinding}
 \begin{figure}
 \begin{center}
@@ -418,10 +436,13 @@
 \begin{itemize}
 \item $O(\log(n^q/\eps))$ scales, $O(\sqrt{k})$ blocking flows per scale.
 \pause
-\item Each blocking flow's Hungarian search uses $O(k)$ relaxations (\alert{alive paths}).
+\item Each blocking flow's Hungarian search uses $O(k)$ relaxations (\alert{alive~paths}).
 \pause
 \item Each blocking flow's Hungarian search BCP can be initialized using the previous one in $O(k\polylog n)$ time (\alert{rewinding}).
 	Need to spend $O(n\polylog n)$ once per scale to build data structures for $t=0$.
+\pause
+\vspace{10pt}
+\item $O((n + k\sqrt{k})\polylog n \log(1/\eps))$
 \pause
 \vspace{20pt}
 \item Thank you.
