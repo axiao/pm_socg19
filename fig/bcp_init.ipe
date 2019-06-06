@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.10">
-<info created="D:20190530224456" modified="D:20190530225224"/>
+<info created="D:20190530224456" modified="D:20190606195356"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -1061,6 +1061,13 @@ h
 h
 </path>
 <text layer="PQ1" matrix="1 0 0 1 0.160105 -3.52181" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=1</text>
+<path matrix="0.982599 0 0 0.267923 5.8447 388.587" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
 </page>
 <page>
 <layer name="alpha"/>
@@ -1264,6 +1271,13 @@ h
 h
 </path>
 <text layer="PQ1" matrix="1 0 0 1 0.160105 -3.52181" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=1</text>
+<path matrix="0.982599 0 0 0.267923 5.8447 388.587" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
 </page>
 <page>
 <layer name="alpha"/>
@@ -1467,6 +1481,13 @@ h
 h
 </path>
 <text layer="PQ2" matrix="1 0 0 1 -0.152536 -3.52213" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=2</text>
+<path matrix="0.982599 0 0 0.267923 5.8447 388.587" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
 </page>
 <page>
 <layer name="alpha"/>
@@ -1667,5 +1688,225 @@ h
 </path>
 <text matrix="1 0 0 1 21.2226 3.47124" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=2</text>
 <text layer="PQ1" matrix="1 0 0 1 0.0887618 -46.6416" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=1</text>
+<path matrix="0.982599 0 0 0.267923 5.8447 388.587" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+<path matrix="0.982599 0 0 0.267923 9.74853 391.236" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+</page>
+<page>
+<layer name="alpha"/>
+<layer name="nodes"/>
+<layer name="arcs"/>
+<layer name="PQ0"/>
+<layer name="PQ1"/>
+<layer name="PQ2"/>
+<layer name="PQ2'"/>
+<layer name="m1"/>
+<layer name="m1_arcs"/>
+<layer name="m2"/>
+<layer name="m2_arcs"/>
+<view layers="alpha nodes PQ0 PQ1 m1 m1_arcs" active="PQ0"/>
+<use layer="nodes" matrix="1 0 0 1 16 0" name="mark/disk(sx)" pos="192 576" size="normal" stroke="black"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="240 624" size="normal" stroke="red"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="240 608" size="normal" stroke="red"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="240 592" size="normal" stroke="red"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="240 576" size="normal" stroke="red"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="240 560" size="normal" stroke="red"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="240 544" size="normal" stroke="red"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="320 624" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="320 608" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="320 592" size="normal" stroke="blue"/>
+<use matrix="1 0 0 1 32 -16" name="mark/disk(sx)" pos="320 576" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="416 576" size="normal" stroke="black"/>
+<path layer="alpha" matrix="0.73913 0 0 0.666667 81.3913 192" stroke="white">
+128 672 m
+128 480 l
+496 480 l
+496 672 l
+h
+</path>
+<path layer="arcs" stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 608 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 592 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 560 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 608 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 592 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 576 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 560 m
+416 576 l
+</path>
+<use layer="nodes" matrix="1 0 0 1 32 -32" name="mark/disk(sx)" pos="320 576" size="normal" stroke="blue"/>
+<path layer="PQ0" matrix="0.991194 0 0 0.809592 5.05817 120.486" stroke="seagreen" fill="lightblue" opacity="50%" tiling="falling">
+256.003 615.104 m
+256.003 538.561 l
+288.243 538.561 l
+288.243 615.104 l
+h
+</path>
+<path matrix="1 0 0 1 2.80375 3.3645" stroke="seagreen" fill="lightblue" opacity="50%" tiling="falling">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+<path layer="PQ1" matrix="1 0 0 0.615804 0 236.321" stroke="black" fill="seagreen" opacity="30%">
+256.003 615.104 m
+256.003 538.561 l
+288.243 538.561 l
+288.243 615.104 l
+h
+</path>
+<path matrix="0.982599 0 0 0.756617 5.8447 150.465" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+<path layer="PQ2" matrix="1.00973 0 0 0.403693 -2.80355 366.791" stroke="black" fill="seagreen" opacity="30%">
+256.003 615.104 m
+256.003 538.561 l
+288.243 538.561 l
+288.243 615.104 l
+h
+</path>
+<path layer="m2" stroke="darkred" pen="ultrafat" opacity="75%">
+272 576 m
+352 592 l
+</path>
+<path layer="m1" stroke="darkred" pen="ultrafat" opacity="30%">
+272 560 m
+352 544 l
+416 576 l
+352 560 l
+</path>
+<path layer="m1_arcs" stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 608 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 592 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 560 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 608 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 592 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 576 m
+416 576 l
+</path>
+<path layer="m2_arcs" stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 608 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 592 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+208 576 m
+272 560 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 608 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 592 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+352 576 m
+416 576 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+272 576 m
+352 592 l
+</path>
+<path stroke="black" pen="fat" opacity="50%">
+272 560 m
+352 544 l
+416 576 l
+</path>
+<path layer="PQ2" matrix="0.982599 0 0 0.756617 5.8447 150.465" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+<path layer="PQ2'" matrix="0.982599 0 0 0.756617 10.0074 153.347" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+<path matrix="1.00973 0 0 0.403693 1.35918 369.673" stroke="black" fill="seagreen" opacity="30%">
+256.003 615.104 m
+256.003 538.561 l
+288.243 538.561 l
+288.243 615.104 l
+h
+</path>
+<text layer="PQ1" matrix="1 0 0 1 0.160105 -3.52181" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=1</text>
+<path matrix="0.982599 0 0 0.267923 5.8447 388.587" stroke="black" fill="seagreen" opacity="30%">
+335.874 618.224 m
+335.874 552.08 l
+368.53 552.08 l
+368.53 618.224 l
+h
+</path>
+<text layer="PQ0" matrix="1 0 0 1 18.665 -53.1481" transformations="translations" pos="256.003 615.104" stroke="black" type="label" width="15.392" height="3.21" depth="0" valign="baseline" size="tiny" style="math">t=0</text>
 </page>
 </ipe>

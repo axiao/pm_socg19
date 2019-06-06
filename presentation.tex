@@ -104,11 +104,7 @@
 \newcommand{\tsupply}{\lambda}
 \newcommand{\fsupply}{\phi}
 
-\newcommand{\A}{{\color{red}A}}
-\newcommand{\B}{{\color{blue}B}}
-\newcommand{\M}{\EuScript{M}}
-\newcommand{\tildeM}{\widetilde{\EuScript{M}}}
-\newcommand{\X}{\EuScript{X}}
+\newcommand{\D}{\EuScript{D}}
 
 \def\EMPH#1{\textcolor{BrickRed}{{\emph{#1}}}}
 
@@ -418,20 +414,21 @@
 \includegraphics<2>[width=0.6\textwidth,page=2]{bcp_init}%
 \includegraphics<3>[width=0.6\textwidth,page=3]{bcp_init}%
 \includegraphics<4>[width=0.6\textwidth,page=4]{bcp_init}%
-\includegraphics<5>[width=0.6\textwidth,page=5]{bcp_init}%
-\includegraphics<6>[width=0.6\textwidth,page=6]{bcp_init}%
-\includegraphics<7->[width=0.6\textwidth,page=7]{bcp_init}%
+\includegraphics<5->[width=0.6\textwidth,page=8]{bcp_init}%
+%\includegraphics<5>[width=0.6\textwidth,page=5]{bcp_init}%
+%\includegraphics<6>[width=0.6\textwidth,page=6]{bcp_init}%
+%\includegraphics<7->[width=0.6\textwidth,page=7]{bcp_init}%
 \end{center}
 \end{figure}
 \begin{itemize}
-\item<1-> Let $X_t$ be the set $X$ at the start of the $t$-th Hungarian search.
-\item<7-> $X_t$ and $X_{t+1}$ differ by only a few nodes (newly matched, dead/alive changes).
-\item<8-> To generate $X_{t+1}$:
+\item<1-> Let $\D_t$ be the BCP at the start of the $t$-th Hungarian search.
+\item<5-> $\D_t$ and $\D_{t+1}$ differ by only a few nodes (newly matched, dead/alive changes).
+\item<6-> To generate $\D_{t+1}$:
 	\begin{enumerate}
-	\item \alert{Rewind} the BCP updates of the last Hungarian search to obtain $X_t$.
+	\item \alert{Rewind} the BCP updates of the last Hungarian search to obtain $\D_t$.
 	\item Apply the few changes (newly matched, dead/alive).
 	\end{enumerate}
-\item<9-> Persistence?
+\item<7-> Persistence?
 \end{itemize}
 \end{frame}
 
