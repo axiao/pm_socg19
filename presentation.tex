@@ -186,7 +186,7 @@
 	\hline
 	Sharathkumar, Agarwal 2012 & $(1+\eps)$ & $O(n\poly(\log n, 1/\eps))$ & $q=1$ \\
 	\hline
-	new (Hungarian) & $1$ & $O((n + k^2)\polylog n)$ & $q \geq 1$ \\
+	new (Hungarian) & exact & $O((n + k^2)\polylog n)$ & $q \geq 1$ \\
 	new (cost-scaling) & $(1+\eps)$ & $O((n + k\sqrt{k})\polylog n \log(1/\eps))$ & $q \geq 1$ \\
 \end{tabular}
 }
@@ -260,26 +260,29 @@
 
 % 06 reduction
 \begin{frame}{Cost-scaling for geometric partial matching}
-\begin{figure}
-\begin{center}
-\includegraphics<1>[width=0.7\textwidth,page=1]{single-linkage_clustering}%
-\includegraphics<2>[width=0.7\textwidth,page=2]{single-linkage_clustering}%
-\includegraphics<3>[width=0.7\textwidth,page=3]{single-linkage_clustering}%
-\includegraphics<4>[width=0.7\textwidth,page=4]{single-linkage_clustering}%
-\includegraphics<5>[width=0.7\textwidth,page=5]{single-linkage_clustering}%
-\includegraphics<6>[width=0.7\textwidth,page=6]{single-linkage_clustering}%
-\includegraphics<7>[width=0.7\textwidth,page=7]{single-linkage_clustering}%
-\includegraphics<8>[width=0.7\textwidth,page=8]{single-linkage_clustering}%
-\includegraphics<9->[width=0.7\textwidth,page=9]{single-linkage_clustering}%
-\end{center}
-\end{figure}
 \begin{itemize}
 \item<1-> Compute $\alpha \geq 0$ satisfying:
 	\begin{enumerate}
 	\item there exists a $k$-matching whose longest edge has cost $\leq n^q\cdot\alpha$
-	\item a $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
+	\item an $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
 	\end{enumerate}
-\item<11-> $(1+\eps)$-approx. geometric partial matching by executing $O(\log(n^q/\eps))$ cost scales.
+	\begin{figure}
+	\begin{center}
+	\includegraphics<1>[width=0.6\textwidth,page=2]{single-linkage_clustering}%
+	\includegraphics<2>[width=0.6\textwidth,page=6]{single-linkage_clustering}%
+	\includegraphics<3->[width=0.6\textwidth,page=7]{single-linkage_clustering}%
+	%\includegraphics<1>[width=0.7\textwidth,page=1]{single-linkage_clustering}%
+	%\includegraphics<2>[width=0.7\textwidth,page=2]{single-linkage_clustering}%
+	%\includegraphics<3>[width=0.7\textwidth,page=3]{single-linkage_clustering}%
+	%\includegraphics<4>[width=0.7\textwidth,page=4]{single-linkage_clustering}%
+	%\includegraphics<5>[width=0.7\textwidth,page=5]{single-linkage_clustering}%
+	%\includegraphics<6>[width=0.7\textwidth,page=6]{single-linkage_clustering}%
+	%\includegraphics<7>[width=0.7\textwidth,page=7]{single-linkage_clustering}%
+	%\includegraphics<8>[width=0.7\textwidth,page=8]{single-linkage_clustering}%
+	%\includegraphics<9->[width=0.7\textwidth,page=9]{single-linkage_clustering}%
+	\end{center}
+	\end{figure}
+\item<1-> $(1+\eps)$-approx. geometric partial matching by executing $O(\log(n^q/\eps))$ cost scales.
 \end{itemize}
 \end{frame}
 
@@ -332,7 +335,7 @@
 \end{center}
 \end{figure}
 \begin{itemize}
-\item<4-> Dynamic 2D BCP with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
+\item<4-> Dynamic 2D \alert{bichromatic closest pair} with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
 \item<10-> Possible to batch potential updates (Vaidya) --- only need to bound number of relaxations.
 \end{itemize}
 \end{frame}
