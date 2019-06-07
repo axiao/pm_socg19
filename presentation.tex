@@ -317,20 +317,21 @@
 \end{frame}
 
 \begin{frame}{Hungarian search with BCP (Agarwal-Efrat-Sharir)}
-\begin{figure}
-\begin{center}
-\includegraphics<1>[width=0.9\textwidth,page=1]{hung_search}%
-\includegraphics<2>[width=0.9\textwidth,page=2]{hung_search}%
-\includegraphics<3>[width=0.9\textwidth,page=3]{hung_search}%
-\includegraphics<4>[width=0.9\textwidth,page=4]{hung_search}%
-\includegraphics<5>[width=0.9\textwidth,page=5]{hung_search}%
-\includegraphics<6>[width=0.9\textwidth,page=6]{hung_search}%
-\includegraphics<7>[width=0.9\textwidth,page=7]{hung_search}%
-\includegraphics<8>[width=0.9\textwidth,page=8]{hung_search}%
-\includegraphics<9->[width=0.9\textwidth,page=9]{hung_search}%
-\end{center}
-\end{figure}
 \begin{itemize}
+\item<1-> Reduced cost: $\alert{c_\pi(\arc vw)} \coloneqq c(\arc vw) - \pi(v) + \pi(w)$
+	\begin{figure}
+	\begin{center}
+	\includegraphics<1>[width=0.9\textwidth,page=1]{hung_search}%
+	\includegraphics<2>[width=0.9\textwidth,page=2]{hung_search}%
+	\includegraphics<3>[width=0.9\textwidth,page=3]{hung_search}%
+	\includegraphics<4>[width=0.9\textwidth,page=4]{hung_search}%
+	\includegraphics<5>[width=0.9\textwidth,page=5]{hung_search}%
+	\includegraphics<6>[width=0.9\textwidth,page=6]{hung_search}%
+	\includegraphics<7>[width=0.9\textwidth,page=7]{hung_search}%
+	\includegraphics<8>[width=0.9\textwidth,page=8]{hung_search}%
+	\includegraphics<9->[width=0.9\textwidth,page=9]{hung_search}%
+	\end{center}
+	\end{figure}
 \item<4-> Dynamic 2D \alert{bichromatic closest pair} with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
 \item<10-> Possible to batch potential updates (Vaidya) --- only need to bound number of relaxations.
 \end{itemize}
