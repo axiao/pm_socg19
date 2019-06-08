@@ -169,7 +169,7 @@
 % some combinatorial algorithms for the general graph problem include Hung, RT
 % geometrization using existing techniques
 % SA uses different geometric techniques, relies on triangle inequality so q=1
-\begin{frame}{Prior work}
+\begin{frame}{Prior work and our results}
 \begin{center}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{l | c | c | c}
@@ -182,8 +182,8 @@
 	\hline
 	Sharathkumar, Agarwal 2012 & $(1+\eps)$ & $O(n\poly(\log n, 1/\eps))$ & $q=1$ \\
 	\hline
-	new (Hungarian) & exact & $O((n + k^2)\polylog n)$ & $q \geq 1$ \\
-	new (cost-scaling) & $(1+\eps)$ & $O((n + k\sqrt{k})\polylog n \log(1/\eps))$ & $q \geq 1$ \\
+	\onslide<2->{\alert{new} (Hungarian) & exact & $O((n + k^2)\polylog n)$ & $q \geq 1$} \\
+	\onslide<2->{\alert{new} (cost-scaling) & $(1+\eps)$ & $O((n + k\sqrt{k})\polylog n \log(1/\eps))$ & $q \geq 1$} \\
 \end{tabular}
 }
 \end{center}
@@ -319,6 +319,7 @@
 \begin{frame}{Hungarian search with BCP (Agarwal-Efrat-Sharir)}
 \begin{itemize}
 \item<1-> Reduced cost: $\alert{c_\pi(\arc vw)} \coloneqq c(\arc vw) - \pi(v) + \pi(w)$
+	\vspace{5pt}
 	\begin{figure}
 	\begin{center}
 	\includegraphics<1>[width=0.9\textwidth,page=1]{hung_search}%
@@ -332,7 +333,11 @@
 	\includegraphics<9->[width=0.9\textwidth,page=9]{hung_search}%
 	\end{center}
 	\end{figure}
-\item<4-> Dynamic 2D \alert{bichromatic closest pair} with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
+\item<4-> Dynamic 2D \alert{bichromatic closest pair} with additive weights: 
+	\[
+	\min_{S_1 \times S_2} \|p_1-p_2\|^q + \omega(p_1) + \omega(p_2)
+	\]
+	in $O(\polylog n)$ update, $O(\log^2 n)$ query (Kaplan~{\etal} SODA'17)
 \item<10-> Possible to batch potential updates (Vaidya) --- only need to bound number of relaxations.
 \end{itemize}
 \end{frame}
