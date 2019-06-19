@@ -251,36 +251,39 @@
 	\item Reduce $\theta \gets \theta/2$, while creating $O(k)$ excess.
 	\item \alert{Refine} this pseudoflow into a circulation, while preserving $\theta$-optimality
 	\end{enumerate}
+\vspace{15pt}
+\pause
+\item \alert{Reduction}: $(1+\eps)$-approx. geometric partial matching by executing $O(\log(n^q/\eps))$ cost scales.
 \end{itemize}
 \end{frame}
 
 % 06 reduction
-\begin{frame}{Cost-scaling for geometric partial matching}
-\begin{itemize}
-\item<1-> Compute $\alpha \geq 0$ satisfying:
-	\begin{enumerate}
-	\item there exists a $k$-matching whose longest edge has cost $\leq n^q\cdot\alpha$
-	\item an $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
-	\end{enumerate}
-	\begin{figure}
-	\begin{center}
-	\includegraphics<1>[width=0.6\textwidth,page=2]{single-linkage_clustering}%
-	\includegraphics<2>[width=0.6\textwidth,page=6]{single-linkage_clustering}%
-	\includegraphics<3->[width=0.6\textwidth,page=7]{single-linkage_clustering}%
-	%\includegraphics<1>[width=0.7\textwidth,page=1]{single-linkage_clustering}%
-	%\includegraphics<2>[width=0.7\textwidth,page=2]{single-linkage_clustering}%
-	%\includegraphics<3>[width=0.7\textwidth,page=3]{single-linkage_clustering}%
-	%\includegraphics<4>[width=0.7\textwidth,page=4]{single-linkage_clustering}%
-	%\includegraphics<5>[width=0.7\textwidth,page=5]{single-linkage_clustering}%
-	%\includegraphics<6>[width=0.7\textwidth,page=6]{single-linkage_clustering}%
-	%\includegraphics<7>[width=0.7\textwidth,page=7]{single-linkage_clustering}%
-	%\includegraphics<8>[width=0.7\textwidth,page=8]{single-linkage_clustering}%
-	%\includegraphics<9->[width=0.7\textwidth,page=9]{single-linkage_clustering}%
-	\end{center}
-	\end{figure}
-\item<1-> $(1+\eps)$-approx. geometric partial matching by executing $O(\log(n^q/\eps))$ cost scales.
-\end{itemize}
-\end{frame}
+%\begin{frame}{Cost-scaling for geometric partial matching}
+%\begin{itemize}
+%\item<1-> Compute $\alpha \geq 0$ satisfying:
+%	\begin{enumerate}
+%	\item there exists a $k$-matching whose longest edge has cost $\leq n^q\cdot\alpha$
+%	\item an $(\eps\alpha/6k)$-optimal circulation is $(1+\eps)$-approx.
+%	\end{enumerate}
+%	\begin{figure}
+%	\begin{center}
+%	\includegraphics<1>[width=0.6\textwidth,page=2]{single-linkage_clustering}%
+%	\includegraphics<2>[width=0.6\textwidth,page=6]{single-linkage_clustering}%
+%	\includegraphics<3->[width=0.6\textwidth,page=7]{single-linkage_clustering}%
+%	%\includegraphics<1>[width=0.7\textwidth,page=1]{single-linkage_clustering}%
+%	%\includegraphics<2>[width=0.7\textwidth,page=2]{single-linkage_clustering}%
+%	%\includegraphics<3>[width=0.7\textwidth,page=3]{single-linkage_clustering}%
+%	%\includegraphics<4>[width=0.7\textwidth,page=4]{single-linkage_clustering}%
+%	%\includegraphics<5>[width=0.7\textwidth,page=5]{single-linkage_clustering}%
+%	%\includegraphics<6>[width=0.7\textwidth,page=6]{single-linkage_clustering}%
+%	%\includegraphics<7>[width=0.7\textwidth,page=7]{single-linkage_clustering}%
+%	%\includegraphics<8>[width=0.7\textwidth,page=8]{single-linkage_clustering}%
+%	%\includegraphics<9->[width=0.7\textwidth,page=9]{single-linkage_clustering}%
+%	\end{center}
+%	\end{figure}
+%\item<1-> $(1+\eps)$-approx. geometric partial matching by executing $O(\log(n^q/\eps))$ cost scales.
+%\end{itemize}
+%\end{frame}
 
 % 07 within a scale (blocking flow bound)
 \begin{frame}{Refinement by blocking flows (Ramshaw-Tarjan)}
@@ -289,6 +292,7 @@
 	\begin{enumerate}
 	\item Hungarian search: raise potentials until an excess-deficit admissible path exists.
 	\item Augment by an admissible \alert{blocking flow}.
+	\item Repeat until 0 excess.
 	\end{enumerate}
 \begin{figure}
 \begin{center}
@@ -310,6 +314,7 @@
 	\begin{enumerate}
 	\item Hungarian search: raise potentials until an excess-deficit admissible path exists.
 	\item Augment by an admissible \alert{blocking flow}.
+	\item Repeat until 0 excess.
 	\end{enumerate}
 \vspace{15pt}
 \item After $O(n\polylog n)$-time preprocessing, perform Hungarian search and find each blocking flow in $O(k\polylog n)$ time.
@@ -398,7 +403,7 @@
 \item Dynamic 2D BCP with $O(\polylog n)$ update time, $O(\log^2 n)$ query time (Kaplan~{\etal} SODA'17)
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.8\textwidth,page=6]{why_dead}%
+\includegraphics[width=0.8\textwidth,page=10]{why_dead}%
 \end{center}
 \end{figure}
 \item Some BCP may begin a Hungarian search with $\Theta(n)$ vertices.
